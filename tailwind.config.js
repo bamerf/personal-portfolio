@@ -13,7 +13,11 @@ module.exports = {
       laptop: pixelToRem(1024),
       desktop: pixelToRem(1280),
     },
-    extend: {},
+    extend: {
+      fontSize: {
+        fluid: 'clamp(1.5rem, 3vw + 1.45rem, 2.75rem)',
+      },
+    },
   },
   plugins: [],
 };

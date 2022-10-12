@@ -14,7 +14,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@bamerf/linter": "^1.0.1",
+    "@bamerf/linter": "^1.0.2",
     "@next/eslint-plugin-next": "^12.3.1",
     "@types/node": "18.8.2",
     "@types/react": "18.0.21",
