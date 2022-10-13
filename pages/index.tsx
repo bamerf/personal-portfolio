@@ -1,7 +1,8 @@
 import type { NextPage } from 'next';
+import type { HeaderProps } from 'components/Header';
 import { Container } from 'components/Container';
 import { Header } from 'components/Header';
-import type { HeaderProps } from 'components/Header';
+import { CareerSummary } from 'components/CareerSummary';
 
 const headerProps: HeaderProps = {
   title: 'Bamdad Erfanian',
@@ -21,7 +22,7 @@ const Home: NextPage = () => {
   return (
     <Container>
       <Header {...headerProps} />
-      <h1>career cummary comp</h1>
+      <CareerSummary />
       <h1>work section</h1>
       <h1>education section</h1>
     </Container>
