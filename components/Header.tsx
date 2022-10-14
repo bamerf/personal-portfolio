@@ -1,15 +1,21 @@
 import type { ImageProps } from 'next/image';
 import type { FC } from 'react';
 import Image from 'next/image';
+import { Icons } from './atoms/Icons';
+import type { IconNames } from './atoms/Icons';
 
 type SocialLink = {
   name: string;
   url: string;
-  imageName: string;
+  iconName: IconNames;
 };
 
 export type HeaderProps = {
-  title: string;
+  name: string;
+  title: {
+    text: string;
+    company: string;
+  };
   description: string;
   image: ImageProps;
   socialLinks: SocialLink[];
@@ -17,23 +23,44 @@ export type HeaderProps = {
 };
 
 export const Header: FC<HeaderProps> = ({
+  name,
   title,
   description,
   image,
   socialLinks,
   location,
 }) => (
-  <div>
-    {image && <Image className="rounded-full" {...image} alt={image.alt} />}
-    <h1 className="text-fluid">{title}</h1>
-    <p>{description}</p>
-    <div className="flex">
-      <div className="flex flex-col"></div>
+  <div className="mb-16">
+    {image && (
+      <div className="mb-4">
+        <Image className=" rounded-full" {...image} alt={image.alt} />
+      </div>
+    )}
+    <h1 className="mb-1 text-3xl font-bold text-white">{name}</h1>
+    <h2 className="mb-6 text-gray-200">
+      {title.text} <span className="font-semibold">{title.company}</span>
+    </h2>
+    <p className="mb-6 max-w-xl text-gray-400">{description}</p>
+    <div className="flex items-end justify-between">
+      <div className="flex items-center gap-1">
+        <div className="animate-pulse">
+          <Icons name="location" size={16} />
+        </div>
+        <p className=" text-sm text-gray-500">Currently in {location}</p>
+      </div>
+      <div className="flex gap-3">
+        {socialLinks.map((socialLink, index) => (
+          <a
+            className="transition-all duration-100 ease-linear hover:-translate-y-1"
+            target="_blank"
+            key={index}
+            href={socialLink.url}
+            rel="noreferrer"
+          >
+            <Icons name={socialLink.iconName} size={24} />
+          </a>
+        ))}
+      </div>
     </div>
-    {socialLinks.map((socialLink, index) => (
-      <a key={index} href={socialLink.url}>
-        {socialLink.name}
-      </a>
-    ))}
   </div>
 );

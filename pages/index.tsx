@@ -1,31 +1,47 @@
 import type { NextPage } from 'next';
 import type { HeaderProps } from 'components/Header';
-import { Container } from 'components/Container';
 import { Header } from 'components/Header';
 import { CareerSummary } from 'components/CareerSummary';
+import { WorkSummary } from 'components/WorkSummary';
+import { EducationSummary } from 'components/EducationSummary';
 
 const headerProps: HeaderProps = {
-  title: 'Bamdad Erfanian',
+  name: 'Bamdad Erfanian',
+  title: {
+    text: 'Senior Frontend Engineer at',
+    company: 'Corellium',
+  },
   description:
     'I architect, build and design user interfaces that work for everyone. I love balancing the needs of the business with the needs of the user to create a delightful experience.',
   image: {
     src: '/profile.jpg',
     alt: 'profile picture',
-    width: 150,
-    height: 150,
+    width: 125,
+    height: 125,
   },
-  socialLinks: [],
-  location: 'Currently in Paris, France',
+  socialLinks: [
+    {
+      name: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/bamdad-erfanian/',
+      iconName: 'linkedin',
+    },
+    {
+      name: 'GitHub',
+      url: 'https://github.com/bamerf/',
+      iconName: 'github',
+    },
+  ],
+  location: 'Grenoble, France',
 };
 
 const Home: NextPage = () => {
   return (
-    <Container>
+    <div className="pb-32">
       <Header {...headerProps} />
+      <WorkSummary />
       <CareerSummary />
-      <h1>work section</h1>
-      <h1>education section</h1>
-    </Container>
+      <EducationSummary />
+    </div>
   );
 };
 

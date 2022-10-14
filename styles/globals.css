@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* TODO fix height for when zoomed out*/
 html,
 body {
   padding: 0;
