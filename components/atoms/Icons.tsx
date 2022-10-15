@@ -3,6 +3,7 @@ import { FC } from 'react';
 type IndividualIconProps = {
   size?: number;
   fill?: string;
+  className?: string;
 };
 
 const Github: FC<IndividualIconProps> = ({ size }) => {
@@ -117,11 +118,52 @@ const Sun = ({ size, fill }: IndividualIconProps) => {
   );
 };
 
-export type IconNames = 'github' | 'linkedin' | 'location' | 'sun';
+const Corellium = ({ size, fill, className }: IndividualIconProps) => {
+  const customSize = `${size}` || '"24"';
+
+  return (
+    <svg
+      className={className}
+      width={customSize}
+      height={customSize}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="12" cy="12" r="12" fill="#D9D9D9" />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M11.1309 22.1642C11.337 22.1652 11.5393 22.1088 11.7151 22.0015L16.9035 18.8768C17.2374 18.6759 17.5137 18.3925 17.7058 18.0538C17.8979 17.7152 17.9992 17.3328 18 16.9437V5.53527C18.0009 5.40471 17.9758 5.27529 17.9262 5.15446C17.8767 5.03363 17.8037 4.92379 17.7114 4.83127C17.6191 4.73876 17.5093 4.66541 17.3885 4.61545C17.2676 4.56549 17.138 4.53991 17.0072 4.54019C16.8293 4.54299 16.6557 4.59491 16.5055 4.6902L13.9802 6.20287C14.4808 6.75884 14.7588 7.4793 14.7612 8.22682V16.9754C14.7629 17.3101 14.6752 17.6392 14.5072 17.9289C14.3391 18.2186 14.0968 18.4583 13.8052 18.6235C13.5135 18.7888 13.183 18.8735 12.8477 18.869C12.5124 18.8645 12.1843 18.7709 11.8972 18.5979L9.99201 17.455V21.0297C9.99145 21.179 10.0205 21.3269 10.0776 21.465C10.1347 21.603 10.2186 21.7284 10.3245 21.8339C10.4304 21.9394 10.5562 22.0229 10.6945 22.0795C10.833 22.1362 10.9813 22.165 11.1309 22.1642V22.1642Z"
+        fill="#080C14"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M10.7036 7.28451L12.6342 6.12465L7.71042 3.16268C7.53565 3.05649 7.33503 3.00022 7.1304 3C6.98169 3.00028 6.83448 3.02979 6.69718 3.08685C6.55989 3.1439 6.43521 3.22739 6.33022 3.33255C6.22526 3.4377 6.14207 3.56245 6.08542 3.6997C6.02876 3.83693 5.99974 3.98397 6.00002 4.1324V12.881C5.99831 13.2729 6.09843 13.6586 6.29062 14.0003C6.48278 14.3421 6.76048 14.6283 7.09652 14.831L9.23876 16.1197V9.87677C9.23962 9.35556 9.37482 8.84336 9.63137 8.38937C9.88791 7.93538 10.2572 7.55491 10.7036 7.28451V7.28451Z"
+        fill="#080C14"
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M10.0006 9.87685V16.5698L12.291 17.9473C12.4652 18.0532 12.665 18.1094 12.8689 18.1099C13.0179 18.1097 13.1654 18.0801 13.303 18.0229C13.4405 17.9658 13.5655 17.8821 13.6706 17.7768C13.7758 17.6714 13.8591 17.5464 13.9159 17.4089C13.9727 17.2715 14.0017 17.1241 14.0014 16.9754V8.22682C14.0009 7.92408 13.9396 7.62449 13.821 7.34583C13.7025 7.06712 13.5292 6.81499 13.3113 6.60429L11.0971 7.93527C10.762 8.13695 10.4849 8.42175 10.2928 8.76196C10.1006 9.1022 9.99998 9.48627 10.0006 9.87685Z"
+        fill="#080C14"
+      />
+    </svg>
+  );
+};
+
+export type IconNames =
+  | 'github'
+  | 'linkedin'
+  | 'location'
+  | 'sun'
+  | 'corellium';
 
 type IconsProps = {
   name: IconNames;
   size?: number;
+  className?: string;
 };
 
 type IconsMap = {
@@ -133,10 +175,11 @@ const iconsMap: IconsMap = {
   linkedin: LinkedIn,
   location: Location,
   sun: Sun,
+  corellium: Corellium,
 };
 
-export const Icons: FC<IconsProps> = ({ name, size }) => {
+export const Icons: FC<IconsProps> = ({ name, size, className }) => {
   const Icon = iconsMap[name];
 
-  return <Icon size={size} />;
+  return <Icon size={size} className={className} />;
 };

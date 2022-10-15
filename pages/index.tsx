@@ -1,9 +1,11 @@
 import type { NextPage } from 'next';
 import type { HeaderProps } from 'components/Header';
+import type { WorkCardProps } from 'components/atoms/WorkCard';
 import { Header } from 'components/Header';
 import { CareerSummary } from 'components/CareerSummary';
 import { WorkSummary } from 'components/WorkSummary';
 import { EducationSummary } from 'components/EducationSummary';
+import { WorkCard } from 'components/atoms/WorkCard';
 
 const headerProps: HeaderProps = {
   name: 'Bamdad Erfanian',
@@ -34,10 +36,24 @@ const headerProps: HeaderProps = {
   location: 'Grenoble, France',
 };
 
+const workProps: WorkCardProps = {
+  name: 'Corellium',
+  title: 'Senior Frontend Engineer',
+  date: 'May 2021 - Present',
+  iconName: 'corellium',
+  description:
+    'Memeber of the Product and Core engineering team. Helped creating companys UI library, rebuilt the marketing website, helped clear 2 years of tech dept.',
+};
+
 const Home: NextPage = () => {
   return (
     <div className="pb-32">
       <Header {...headerProps} />
+      <h1 className="mb-8 text-3xl font-semibold">Work</h1>
+      <WorkCard {...workProps} />
+      <WorkCard {...workProps} />
+      <WorkCard {...workProps} />
+      <WorkCard {...workProps} />
       <WorkSummary />
       <CareerSummary />
       <EducationSummary />

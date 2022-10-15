@@ -30,13 +30,13 @@ export const Header: FC<HeaderProps> = ({
   socialLinks,
   location,
 }) => (
-  <div className="mb-16">
+  <div className="mb-32">
     {image && (
       <div className="mb-4">
         <Image className=" rounded-full" {...image} alt={image.alt} />
       </div>
     )}
-    <h1 className="mb-1 text-3xl font-bold text-white">{name}</h1>
+    <h1 className="mb-1 text-4xl font-bold text-white">{name}</h1>
     <h2 className="mb-6 text-gray-200">
       {title.text} <span className="font-semibold">{title.company}</span>
     </h2>

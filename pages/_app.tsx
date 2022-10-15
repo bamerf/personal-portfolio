@@ -7,7 +7,7 @@ import { Container } from 'components/atoms/Container';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     // TODO add custom gray-900
-    <div className="bg-black">
+    <div className="bg-neutral-900">
       <Head>
         <meta
           name="viewport"
