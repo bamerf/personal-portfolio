@@ -43,6 +43,7 @@ const workProps: WorkCardProps = {
   iconName: 'corellium',
   description:
     'Memeber of the Product and Core engineering team. Helped creating companys UI library, rebuilt the marketing website, helped clear 2 years of tech dept.',
+  stack: ['react', 'nodejs', 'nextjs', 'vercel', 'redux', 'aws', 'tailwind'],
 };
 
 const Home: NextPage = () => {
