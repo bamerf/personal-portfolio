@@ -43,7 +43,7 @@ const workProps: WorkCardProps = {
   iconName: 'corellium',
   description:
     'Memeber of the Product and Core engineering team. Helped creating companys UI library, rebuilt the marketing website, helped clear 2 years of tech dept.',
-  stack: ['react', 'nodejs', 'nextjs', 'vercel', 'redux', 'aws', 'tailwind'],
+  stack: ['typescript', 'react', 'nodejs', 'nextjs', 'jenkins', 'docker'],
 };
 
 const Home: NextPage = () => {
@@ -52,9 +52,27 @@ const Home: NextPage = () => {
       <Header {...headerProps} />
       <h1 className="mb-8 text-3xl font-semibold">Work</h1>
       <WorkCard {...workProps} />
-      <WorkCard {...workProps} />
-      <WorkCard {...workProps} />
-      <WorkCard {...workProps} />
+      <WorkCard
+        {...workProps}
+        iconName="pay"
+        name="Pay.com.au"
+        title="Full Stack Developer"
+        stack={['circleci', 'mongodb', 'apollo', 'azure', 'jenkins', 'docker']}
+      />
+      <WorkCard
+        {...workProps}
+        iconName="leadchat"
+        name="Leadchat"
+        title="Full Stack Developer"
+        stack={['react', 'nodejs', 'docker', 'circleci', 'aws', 'postgres']}
+      />
+      <WorkCard
+        {...workProps}
+        iconName="backifi"
+        name="Leadchat"
+        title="Full Stack Developer"
+        stack={['react', 'nodejs', 'docker', 'circleci', 'aws', 'postgres']}
+      />
       <WorkSummary />
       <CareerSummary />
       <EducationSummary />

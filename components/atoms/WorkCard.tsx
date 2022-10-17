@@ -30,7 +30,7 @@ export const WorkCard: FC<WorkCardProps> = ({
       <p className="pb-3">{description}</p>
       <div className="flex gap-1 pb-6">
         {stack?.map((iconName, index) => (
-          <Icons key={iconName + index} name={iconName} size={24} />
+          <Icons key={iconName + index} name={iconName} />
         ))}
       </div>
       <a className="text-neutral-600" href="">
