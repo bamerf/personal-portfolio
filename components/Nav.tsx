@@ -12,14 +12,14 @@ export const Nav = () => {
           About
         </a>
         <a href="" className="text-gray-400">
-          Work
-        </a>
-        <a href="" className="text-gray-400">
           Resume
         </a>
+        <a href="" className="text-gray-400">
+          Contact
+        </a>
       </nav>
-      <div className="rounded-lg bg-gray-300 p-2">
-        <Icons name="sun" size={24} />
+      <div className="rounded-lg bg-gray-300 p-[6px]">
+        <Icons name="sun" size={16} />
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Nav } from 'components/Nav';
 import { Container } from 'components/atoms/Container';
+import { Footer } from 'components/Footer';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -20,6 +21,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <main>
           <Component {...pageProps} />
         </main>
+        <Footer />
       </Container>
     </div>
   );
