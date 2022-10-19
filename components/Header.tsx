@@ -37,16 +37,16 @@ export const Header: FC<HeaderProps> = ({
       </div>
     )}
     <h1 className="mb-1 text-4xl font-bold text-white">{name}</h1>
-    <h2 className="mb-6 text-gray-200">
+    <h3 className="mb-6 text-neutral-200">
       {title.text} <span className="font-semibold">{title.company}</span>
-    </h2>
-    <p className="mb-6 max-w-xl text-gray-400">{description}</p>
+    </h3>
+    <p className="mb-6 max-w-xl text-neutral-400">{description}</p>
     <div className="flex items-end justify-between">
       <div className="flex items-center gap-1">
         <div className="animate-pulse">
-          <Icons name="location" size={16} />
+          <Icons name="location" size={16} fill="#737373" />
         </div>
-        <p className=" text-sm text-gray-500">Currently in {location}</p>
+        <p className=" text-sm text-neutral-500">Currently in {location}</p>
       </div>
       <div className="flex gap-3">
         {socialLinks.map((socialLink, index) => (

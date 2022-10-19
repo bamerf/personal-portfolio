@@ -21,7 +21,7 @@ export const WorkCard: FC<WorkCardProps> = ({
 }) => (
   <div className="mb-8 flex justify-between rounded-md bg-neutral-800 p-6">
     <div>
-      <Icons className="mb-2" name={iconName} size={28} />
+      <Icons className="mb-2" name={iconName} size={32} />
       <h1 className="text-xl font-bold text-neutral-200">{name}</h1>
       <h2 className="mb-1 font-semibold text-neutral-300">{title}</h2>
       <p className="text-sm text-neutral-600">{date}</p>

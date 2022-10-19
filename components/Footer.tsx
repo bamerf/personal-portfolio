@@ -1,5 +1,5 @@
 export const Footer = () => (
-  <footer className="flex justify-between border-t-[1px] border-neutral-800 pt-8 pb-24">
+  <footer className="flex justify-between border-t-[1px] border-neutral-800 pt-8 pb-32">
     <div className="flex gap-6">
       <a href="" className="text-neutral-600">
         Home
