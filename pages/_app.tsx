@@ -5,9 +5,11 @@ import { Nav } from 'components/Nav';
 import { Container } from 'components/atoms/Container';
 import { Footer } from 'components/Footer';
 
+// TODO add responsive
+// TODO add dark mode
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    // TODO add custom gray-900
     <div className="bg-neutral-900">
       <Head>
         <meta

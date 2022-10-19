@@ -18,8 +18,8 @@ export const Nav = () => {
           Contact
         </a>
       </nav>
-      <div className="rounded-lg bg-gray-300 p-[6px]">
-        <Icons name="sun" size={16} />
+      <div className="rounded-lg bg-gray-300 p-2">
+        <Icons name="sun" size={18} />
       </div>
     </div>
   );
