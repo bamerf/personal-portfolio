@@ -1,3 +1,4 @@
+import type { EducationCardProps } from 'components/atoms/EducationCard';
 import type { WorkCardProps } from 'components/atoms/WorkCard';
 import type { HeaderProps } from 'components/Header';
 
@@ -82,5 +83,32 @@ export const workData: WorkCardProps[] = [
     description:
       'Member of the Product and Core engineering team. Helped creating companys UI library, rebuilt the marketing website, helped clear 2 years of tech dept.',
     stack: ['react', 'nodejs', 'postgres', 'circleci', 'docker', 'aws'],
+  },
+];
+
+export const educationData: EducationCardProps[] = [
+  {
+    place: 'General Assembly',
+    degree: 'Certificate in Software Engineering',
+    date: '2019',
+    iconName: 'ga',
+  },
+  {
+    place: 'University of Syndey',
+    degree: 'Master in Screen Arts',
+    date: '2015 - 2016',
+    iconName: 'usyd',
+  },
+  {
+    place: 'Australian Film, Television and Radio School',
+    degree: 'Graduate Diploma in Editing',
+    date: '2014',
+    iconName: 'aftrs',
+  },
+  {
+    place: 'Sydney Film School',
+    degree: 'Diploma in Screen and Media',
+    date: '2012 - 2013',
+    iconName: 'sfs',
   },
 ];

@@ -2,7 +2,7 @@ import type { FC } from 'react';
 import { Icons } from './Icons';
 import type { EducationIconNames } from './Icons';
 
-type EducationCardProps = {
+export type EducationCardProps = {
   place: string;
   degree: string;
   date: string;
@@ -15,7 +15,7 @@ export const EducationCard: FC<EducationCardProps> = ({
   date,
   iconName,
 }) => (
-  <div className="mb-8 flex gap-3 rounded-md bg-neutral-800 p-6">
+  <div className="flex gap-3 rounded-md bg-neutral-800 p-6">
     <Icons name={iconName} size={32} />
     <div className="flex flex-col gap-1">
       <h2 className="text-xl font-bold text-neutral-200">{place}</h2>

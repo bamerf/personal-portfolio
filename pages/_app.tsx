@@ -7,6 +7,7 @@ import { Footer } from 'components/Footer';
 
 // TODO add responsive
 // TODO add dark mode
+// TODO fix zoomed out version
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
