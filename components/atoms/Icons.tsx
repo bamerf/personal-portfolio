@@ -2,12 +2,12 @@ import { FC } from 'react';
 
 type IndividualIconProps = {
   size?: string;
-  fill?: string;
+  fill: string;
   className?: string;
   theme: 'light' | 'dark';
 };
 
-const Github: FC<IndividualIconProps> = ({ size, fill = '#737373' }) => {
+const Github: FC<IndividualIconProps> = ({ size, fill }) => {
   return (
     <svg
       width={size}
@@ -33,7 +33,7 @@ const Github: FC<IndividualIconProps> = ({ size, fill = '#737373' }) => {
   );
 };
 
-const LinkedIn: FC<IndividualIconProps> = ({ size, fill = '#737373' }) => {
+const LinkedIn: FC<IndividualIconProps> = ({ size, fill }) => {
   return (
     <svg
       width={size}
@@ -220,7 +220,7 @@ const React: FC<IndividualIconProps> = ({ size, fill, className, theme }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="12" cy="12.395" r="12" fill="#171717" />
+      <circle cx="12" cy="12.395" r="12" fill={fill} />
       <path
         d="M12 13.847C12.9081 13.847 13.6444 13.0974 13.6444 12.1728C13.6444 11.2482 12.9081 10.4987 12 10.4987C11.0918 10.4987 10.3556 11.2482 10.3556 12.1728C10.3556 13.0974 11.0918 13.847 12 13.847Z"
         fill="#61DAFB"
@@ -262,7 +262,7 @@ const NextJS: FC<IndividualIconProps> = ({ size, fill, className, theme }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="12" cy="12" r="12" fill="#171717" />
+      <circle cx="12" cy="12" r="12" fill={fill} />
       <path
         d="M16.9602 10.0016H20.618V10.635H19.167V13.9669H18.4415V10.635H16.9602V10.0016Z"
         fill="white"
@@ -310,7 +310,7 @@ const Vercel: FC<IndividualIconProps> = ({ size, fill, className, theme }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="12" cy="12" r="12" fill="#171717" />
+      <circle cx="12" cy="12" r="12" fill={fill} />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -321,7 +321,7 @@ const Vercel: FC<IndividualIconProps> = ({ size, fill, className, theme }) => {
   );
 };
 
-const Redux: FC<IndividualIconProps> = ({ size }) => {
+const Redux: FC<IndividualIconProps> = ({ size, fill }) => {
   return (
     <svg
       width={size}
@@ -330,7 +330,7 @@ const Redux: FC<IndividualIconProps> = ({ size }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="12" cy="12" r="12" fill="#171717" />
+      <circle cx="12" cy="12" r="12" fill={fill} />
       <path
         d="M15.0863 14.4758C15.6767 14.4155 16.1247 13.9129 16.1044 13.3095C16.0928 13.0183 15.9677 12.7428 15.7552 12.5405C15.5428 12.3382 15.2594 12.2247 14.9643 12.2239H14.9236C14.2923 12.2439 13.8036 12.7667 13.8242 13.3901C13.8446 13.6917 13.9666 13.953 14.1499 14.1341C13.4576 15.4814 12.3989 16.4666 10.8108 17.2909C9.73176 17.8538 8.61176 18.0549 7.49203 17.9143C6.57569 17.7936 5.86329 17.3916 5.41529 16.728C4.7639 15.7428 4.70261 14.6772 5.25258 13.6113C5.63956 12.8473 6.25027 12.2841 6.63698 12.0027C6.55563 11.7413 6.43332 11.2989 6.3723 10.9773C3.41963 13.0883 3.72498 15.9436 4.62098 17.2909C5.29298 18.2962 6.65705 18.9197 8.16376 18.9197C8.57108 18.9197 8.97813 18.8795 9.38546 18.7791C11.9916 18.2764 13.9666 16.7481 15.0863 14.4761V14.4758ZM18.6698 11.9826C17.1224 10.1929 14.842 9.20763 12.2359 9.20763H11.9102C11.7269 8.84584 11.3402 8.60428 10.9125 8.60428H10.8718C10.2408 8.62437 9.7521 9.14711 9.77244 9.77055C9.78405 10.0618 9.90913 10.3373 10.1216 10.5396C10.334 10.7419 10.6174 10.8553 10.9125 10.8562H10.9532C11.1676 10.8459 11.3748 10.7763 11.5512 10.6554C11.7275 10.5346 11.866 10.3673 11.9509 10.1725H12.3173C13.8646 10.1725 15.3307 10.6149 16.6541 11.4794C17.6721 12.143 18.4051 13.0074 18.8122 14.0532C19.1582 14.8978 19.1379 15.7221 18.7715 16.4259C18.2015 17.4915 17.2444 18.0748 15.9821 18.0748C15.1677 18.0748 14.394 17.8335 13.9867 17.6524C13.7627 17.8535 13.3554 18.1752 13.0703 18.3763C13.946 18.7788 14.842 19 15.697 19C17.6518 19 19.0972 17.9342 19.6472 16.8686C20.2375 15.7023 20.1968 13.6917 18.6698 11.9826V11.9826ZM8.32647 14.8175C8.33808 15.1087 8.46317 15.3842 8.67561 15.5865C8.88805 15.7888 9.17142 15.9023 9.46654 15.9032H9.50722C10.1385 15.8831 10.6269 15.3603 10.6066 14.7369C10.595 14.4457 10.4699 14.1702 10.2575 13.9679C10.045 13.7656 9.76167 13.6521 9.46654 13.6512H9.42586C9.38519 13.6512 9.3239 13.6512 9.28349 13.6713C8.44878 12.3039 8.10247 10.8163 8.22478 9.20763C8.30614 8.0012 8.71346 6.95571 9.42613 6.09098C10.0165 5.34703 11.1568 4.98497 11.9305 4.96515C14.0886 4.92498 15.005 7.57914 15.066 8.64472C15.3307 8.70497 15.7787 8.84584 16.084 8.94626C15.8397 5.68901 13.8036 4 11.8489 4C10.0165 4 8.32647 5.30686 7.65447 7.23716C6.7178 9.81099 7.32878 12.2841 8.46885 14.2345C8.36715 14.3751 8.30586 14.5963 8.32647 14.8175V14.8175Z"
         fill="#764ABC"
@@ -369,7 +369,7 @@ const AWS: FC<IndividualIconProps> = ({ size }) => {
   );
 };
 
-const Tailwind: FC<IndividualIconProps> = ({ size }) => {
+const Tailwind: FC<IndividualIconProps> = ({ size, fill }) => {
   return (
     <svg
       width={size}
@@ -378,7 +378,7 @@ const Tailwind: FC<IndividualIconProps> = ({ size }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="12" cy="12" r="12" fill="#171717" />
+      <circle cx="12" cy="12" r="12" fill={fill} />
       <path
         d="M11.4772 6.00392C8.19797 6.11521 7.22335 8.61656 7 9.97167C7.29103 9.46937 8.20812 8.36725 9.55838 8.36725C11.132 8.36725 12.3299 10.2427 13.0609 10.8281C13.949 11.5393 15.7335 12.4784 18.0761 11.7171C19.9442 11.11 20.8105 8.99237 21 7.9878C20.0964 9.29954 18.7259 10.0874 17.0305 9.15861C15.8629 8.519 14.9898 5.88469 11.4772 6.00392Z"
         fill="#07B6D5"
@@ -510,7 +510,7 @@ const Azure: FC<IndividualIconProps> = ({ size }) => {
   );
 };
 
-const Jenkins: FC<IndividualIconProps> = ({ size }) => {
+const Jenkins: FC<IndividualIconProps> = ({ size, fill }) => {
   return (
     <svg
       width={size}
@@ -519,7 +519,7 @@ const Jenkins: FC<IndividualIconProps> = ({ size }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="12" cy="12" r="12" fill="#171717" />
+      <circle cx="12" cy="12" r="12" fill={fill} />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -875,7 +875,7 @@ const Docker: FC<IndividualIconProps> = ({ size, className }) => {
   );
 };
 
-const TypeScript: FC<IndividualIconProps> = ({ size, className }) => {
+const TypeScript: FC<IndividualIconProps> = ({ size, fill, className }) => {
   return (
     <svg
       className={className}
@@ -885,7 +885,7 @@ const TypeScript: FC<IndividualIconProps> = ({ size, className }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="12" cy="12" r="12" fill="#171717" />
+      <circle cx="12" cy="12" r="12" fill={fill} />
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -1342,7 +1342,7 @@ export const Icons: FC<IconsProps> = ({
   name,
   size = '24',
   className,
-  fill,
+  fill = '#171717',
 }) => {
   const Icon = iconsMap[name];
 

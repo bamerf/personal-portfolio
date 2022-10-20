@@ -4,10 +4,10 @@ import { EducationSection } from 'components/EducationSection';
 
 const About: NextPage = () => {
   return (
-    <Container>
+    <div>
       <h1 className="mb-16 text-4xl font-bold text-white">About</h1>
 
-      <div className="mb-24 [&>p]:mb-6 [&>p]:text-neutral-300">
+      <div className="mb-24 flex flex-col gap-5 text-neutral-300">
         <p>
           I&apos;m currently working at{' '}
           <a
@@ -54,34 +54,36 @@ const About: NextPage = () => {
         </p>
       </div>
 
-      <EducationSection className="mb-24" />
+      <EducationSection className="!mb-24" />
 
-      <div className="mb-24 [&>p]:mb-6 [&>p]:text-neutral-300">
+      <div className="mb-24">
         <h2 className="mb-6 text-3xl font-semibold">After Hours</h2>
-        <p>Outside of work, all my time is spent focusing on health.</p>
-        <p>
-          For physical health, I do weight training and Bikram Yoga. For mental
-          peace I meditate.
-        </p>
-        <p>
-          I also spend a good portion of my time studying, learning and
-          exercising my mental capacity. I try to do a coding challenge a day,
-          learning new technologies or read articles.
-        </p>
-        <p>
-          And I&apos;m a big fan of Techno and play at events when I get the
-          chance. You can listen to some of my sets{' '}
-          <a
-            target="_blank"
-            rel="noreferrer noopener"
-            href="https://www.zarbsound.com/"
-            className="font-semibold underline"
-          >
-            here
-          </a>
-        </p>
+        <div className="flex flex-col gap-5 text-neutral-300">
+          <p>Outside of work, all my time is spent focusing on health.</p>
+          <p>
+            For physical health, I do weight training and Bikram Yoga. For
+            mental peace I meditate.
+          </p>
+          <p>
+            I also spend a good portion of my time studying, learning and
+            exercising my mental capacity. I try to do a coding challenge a day,
+            learning new technologies or read articles.
+          </p>
+          <p>
+            And I&apos;m a big fan of Techno and play at events when I get the
+            chance. You can listen to some of my sets{' '}
+            <a
+              target="_blank"
+              rel="noreferrer noopener"
+              href="https://www.zarbsound.com/"
+              className="font-semibold underline"
+            >
+              here
+            </a>
+          </p>
+        </div>
       </div>
-    </Container>
+    </div>
   );
 };
 

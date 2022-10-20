@@ -19,7 +19,7 @@ export const WorkCard: FC<WorkCardProps> = ({
   description,
   stack,
 }) => (
-  <div className="flex justify-between rounded-md bg-neutral-800 p-6">
+  <div className="flex justify-between rounded-md bg-neutral-800 p-6 transition-all duration-75 ease-linear hover:bg-neutral-700">
     <div>
       <Icons className="mb-2" name={iconName} size={32} />
       <h1 className="text-xl font-bold text-neutral-200">{name}</h1>

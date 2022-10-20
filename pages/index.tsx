@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import type { HeaderProps } from 'components/Header';
+import Link from 'next/link';
 import type { WorkCardProps } from 'components/atoms/WorkCard';
 import { Header } from 'components/Header';
 import { WorkCard } from 'components/atoms/WorkCard';
@@ -14,7 +14,15 @@ const Home: NextPage = () => {
         <h2 className="mb-6 text-3xl font-semibold">Work</h2>
         <div className="flex flex-col gap-8">
           {workData.map((work: WorkCardProps, index) => (
-            <WorkCard key={index} {...work} />
+            <Link
+              className="cursor-pointer"
+              href={`/work/${work.iconName}`}
+              key={index}
+            >
+              <a>
+                <WorkCard key={index} {...work} />
+              </a>
+            </Link>
           ))}
         </div>
       </div>

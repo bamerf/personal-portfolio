@@ -57,7 +57,7 @@ export const Header: FC<HeaderProps> = ({
             href={socialLink.url}
             rel="noreferrer"
           >
-            <Icons name={socialLink.iconName} size={24} />
+            <Icons name={socialLink.iconName} size={24} fill="#525252" />
           </a>
         ))}
       </div>
