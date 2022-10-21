@@ -4,7 +4,7 @@ import type { FC } from 'react';
 type ProjectSectionProps = {
   title: string;
   children: React.ReactNode;
-  imageNames: string[];
+  imageNames?: string[];
 };
 
 export const ProjectSection: FC<ProjectSectionProps> = ({
@@ -15,18 +15,22 @@ export const ProjectSection: FC<ProjectSectionProps> = ({
   return (
     <div>
       <h2 className="mb-4 text-3xl font-semibold">{title}</h2>
-      <div className="mb-10 flex flex-col gap-5">{children}</div>
+      <div className="mb-10 flex flex-col gap-5 text-neutral-200">
+        {children}
+      </div>
       <div className="flex flex-col gap-8">
-        {imageNames.map((image, index) => (
-          <Image
-            key={index}
-            className="rounded-md"
-            src={`/images/${image}`}
-            width={2850}
-            height={1388}
-            alt=""
-          />
-        ))}
+        {imageNames &&
+          imageNames.length > 0 &&
+          imageNames.map((image, index) => (
+            <Image
+              key={index}
+              className="rounded-md"
+              src={`/images/${image}`}
+              width={2850}
+              height={1388}
+              alt=""
+            />
+          ))}
       </div>
     </div>
   );

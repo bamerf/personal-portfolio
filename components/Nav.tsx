@@ -1,6 +1,8 @@
 import clsx from 'clsx';
 import Link from 'next/link';
 import { forwardRef } from 'react';
+import type { FC } from 'react';
+import { useRouter } from 'next/router';
 import { Icons } from './atoms/Icons';
 
 type CustomLinkProps = {
@@ -31,17 +33,46 @@ export const CustomLink = forwardRef<HTMLAnchorElement, CustomLinkProps>(
 
 CustomLink.displayName = 'CustomLink';
 
-export const Nav = () => {
+export type NavLink = {
+  label: string;
+  href: string;
+};
+
+type NavProps = {
+  navLinks: NavLink[];
+};
+
+export const Nav: FC<NavProps> = ({ navLinks }) => {
+  const router = useRouter();
+
   return (
     <div className="flex items-center justify-between pt-10 pb-32">
       <nav className="flex gap-2">
-        <Link href="/" passHref>
-          <CustomLink label="Home" />
-        </Link>
-        <Link href="/about" passHref>
-          <CustomLink label="About" />
-        </Link>
-        <CustomLink label="Resume" href="/resume.pdf" target="_blank" />
+        {navLinks.map((link, index) => {
+          if (link.label === 'Resume') {
+            return (
+              <CustomLink
+                key={index}
+                label={link.label}
+                href={link.href}
+                target="_blank"
+              />
+            );
+          }
+
+          return (
+            <Link key={index} href={link.href} passHref>
+              <CustomLink
+                label={link.label}
+                className={
+                  router.pathname === link.href
+                    ? 'text-neutral-100 underline'
+                    : ''
+                }
+              />
+            </Link>
+          );
+        })}
       </nav>
       <div className="rounded-lg bg-gray-300 p-2">
         <Icons name="sun" size={18} />

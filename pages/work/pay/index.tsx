@@ -46,7 +46,7 @@ const Pay: FC<PayPageProps> = ({ data }) => {
           <p>
             Our aim was to create a robust and secure codebase. We used
             block-chain technology to manage our ledgers and had a code audit
-            process for every step of the user&apos;s action
+            process for every step of the user&apos;s actions.
           </p>
           <p>Here are some of the projects I had the pleasure worked on.</p>
         </div>
@@ -58,9 +58,8 @@ const Pay: FC<PayPageProps> = ({ data }) => {
           imageNames={['pay-ui-1.png', 'pay-ui-2.png']}
         >
           <p>
-            Having built a design system and UI library before joining
-            Pay.com.au, I took the responsibility of building a new one for
-            Pay.com.au.
+            Having built a design system and UI library before joining company,
+            I took the responsibility of building a new one for Pay.com.au.
           </p>
           <p>
             I used TypeScript, React and modern design patterns to create a set

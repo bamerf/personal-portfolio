@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { Nav } from 'components/Nav';
 import { Container } from 'components/atoms/Container';
 import { Footer } from 'components/Footer';
+import { NavData } from 'data';
 
 // TODO add responsive
 // TODO add dark mode
@@ -14,6 +15,11 @@ import { Footer } from 'components/Footer';
 // TODO add html lang
 // TODO add alt tags to images
 // TODO add redirect for /work
+// TODO add back button to work pages
+// TODO check text color across app, maybe create Text and Heading components
+// TODO replace a links
+// TODO check margin across app, use a consistent system
+// TODO check text and data
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -26,11 +32,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
       </Head>
       <Container>
-        <Nav />
+        <Nav navLinks={NavData} />
         <main>
           <Component {...pageProps} />
         </main>
-        <Footer />
+        <Footer navLinks={NavData} />
       </Container>
     </div>
   );

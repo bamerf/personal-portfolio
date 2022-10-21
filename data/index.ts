@@ -2,6 +2,21 @@ import type { EducationCardProps } from 'components/atoms/EducationCard';
 import type { WorkCardProps } from 'components/atoms/WorkCard';
 import type { HeaderProps } from 'components/Header';
 
+export const NavData = [
+  {
+    label: 'Home',
+    href: '/',
+  },
+  {
+    label: 'About',
+    href: '/about',
+  },
+  {
+    label: 'Resume',
+    href: '/resume.pdf',
+  },
+];
+
 export const headerData: HeaderProps = {
   name: 'Bamdad Erfanian',
   title: {
@@ -79,7 +94,7 @@ export const workData: WorkCardProps[] = [
     name: 'PoweredLocal',
     title: 'Full Stack Developer',
     date: 'May 2021 - Present',
-    iconName: 'corellium',
+    iconName: 'backifi',
     description:
       'Member of the Product and Core engineering team. Helped creating companys UI library, rebuilt the marketing website, helped clear 2 years of tech dept.',
     stack: ['react', 'nodejs', 'postgres', 'circleci', 'docker', 'aws'],

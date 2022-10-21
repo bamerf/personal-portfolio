@@ -5,6 +5,7 @@ import { workData } from 'data';
 import type { WorkCardProps } from 'components/atoms/WorkCard';
 import { Icons } from 'components/atoms/Icons';
 import { ProjectSection } from 'components/ProjectSection';
+import { ExternalLink } from 'components/atoms/ExternalLink';
 
 type LeadchatPageProps = {
   data: WorkCardProps;
@@ -25,46 +26,86 @@ const Leadchat: FC<LeadchatPageProps> = ({ data }) => {
           </div>
           <Image
             className="w-full rounded-md"
-            src={`/images/pay-main.png`}
-            width={1382}
-            height={1320}
+            src={`/images/leadchat-ui-1.png`}
+            width={2850}
+            height={1388}
             alt=""
           />
         </div>
 
         <div className="flex flex-col gap-5 text-neutral-300">
           <p>
-            I joined the Leadchat team with the goal of moving the product from
-            an MVP to a fully fledged payment platform.
+            Leadchat presented an amazing growth opportunity for me as developer
+            as I was the sole developer on the platform tasked to build many new
+            tools as well as take charge of the codebase moved to more modern
+            technologies and languages.
           </p>
           <p>
-            I worked closely with the CTO on all the different parts of the
-            product. I was responsible for the frontend, backend, and the
-            infrastructure alongside the CTO and I also worked on the design of
-            the product.
+            I was responsible for the frontend, backend, design and the
+            infrastructure of all the tools, and helped turn many business ideas
+            into tools that were used both by clients and staff.
           </p>
           <p>
-            Our aim was to create a robust and secure codebase. We used
-            block-chain technology to manage our ledgers and had a code audit
-            process for every step of the user&apos;s action
+            Here are some of the projects and tools I had the pleasure worked
+            on.
           </p>
-          <p>Here are some of the projects I had the pleasure worked on.</p>
         </div>
       </div>
 
       <div className="flex flex-col gap-24">
-        <ProjectSection
-          title="Component Library"
-          imageNames={['pay-ui-1.png', 'pay-ui-2.png']}
-        >
+        <ProjectSection title="Rating Tool">
           <p>
-            Having built a design system and UI library before joining
-            Leadchat.com.au, I took the responsibility of building a new one for
-            Leadchat.com.au.
+            One of the first tasks I was given was to create a tool that would
+            help the business evaluate the performance of the support team and
+            the quality of the support provided to clients.
           </p>
           <p>
-            I used TypeScript, React and modern design patterns to create a set
-            that could be used across different products.
+            I worked closely with other departments to create a set of
+            performance metrics that could promote healthy competition between
+            the support team and help the business identify areas of
+            improvement.
+          </p>
+          <p>
+            Using these metrics I was able to create an app where each memeber
+            could be rated by their peers and the results would be displayed in
+            a leaderboard.
+          </p>
+          <p>
+            I was responsible for the design, data modeling, frontend and
+            backend, insfrastructure, CI/CD and hosting.
+          </p>
+        </ProjectSection>
+
+        <ProjectSection
+          title="Component Library"
+          imageNames={['leadchat-ui-2.png', 'leadchat-ui-3.png']}
+        >
+          <p>
+            I had the pleasure to design and build my first component library at
+            Leadchat with the aim of unifying the design language of the
+            platform.
+          </p>
+          <p>
+            I used Storybook to create a living documentation of the components
+            and styled-components to create a theme that could be used across
+            the platform.
+          </p>
+          <p>
+            Check out the{' '}
+            <ExternalLink
+              className="font-bold underline"
+              href="https://www.figma.com/file/xl28rT9nlkuB1YHjSQQv8a/Bam-Erfanian---Design-System-Template"
+            >
+              Design System
+            </ExternalLink>{' '}
+            and the{' '}
+            <ExternalLink
+              className="font-bold underline"
+              href="https://design-system-zeta.vercel.app/"
+            >
+              Component Library
+            </ExternalLink>
+            .
           </p>
         </ProjectSection>
 
@@ -77,15 +118,13 @@ const Leadchat: FC<LeadchatPageProps> = ({ data }) => {
               initiatives, projects and features, some of which are listed below
             </p>
             <ul className="ml-8 flex flex-col gap-2 [&>li]:list-disc">
-              <li>Directly managed two external teams</li>
-              <li>Built the two factor authentication feature</li>
-              <li>Implemented the integration with BPAY payment platform</li>
               <li>
-                Worked on implementing robust UI and server side validations
+                Created an email system compatible with all browsers and clients
               </li>
+              <li>Built a number of reporting and analysis tools</li>
               <li>
-                And was actively involved in the interviewing and the hiring
-                process
+                Took responsibility for a newly developed platform with a lot of
+                rough edges.
               </li>
             </ul>
           </div>
