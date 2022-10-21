@@ -8,6 +8,12 @@ import { Footer } from 'components/Footer';
 // TODO add responsive
 // TODO add dark mode
 // TODO fix zoomed out version
+// TODO add favicon
+// TODO add meta tags
+// TODO add title and description
+// TODO add html lang
+// TODO add alt tags to images
+// TODO add redirect for /work
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
