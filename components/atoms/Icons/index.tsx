@@ -111,6 +111,26 @@ const Sun: FC<IndividualIconProps> = ({ size, fill }) => {
   );
 };
 
+const ArrowRight: FC<IndividualIconProps> = ({ size, fill }) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5 12H19M19 12L12 5M19 12L12 19"
+        stroke={fill}
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
 const Corellium: FC<IndividualIconProps> = ({ size, fill, className }) => {
   return (
     <svg
@@ -1289,7 +1309,7 @@ export type CompanyIconNames =
 
 export type EducationIconNames = 'ga' | 'usyd' | 'aftrs' | 'sfs';
 
-export type UtilityIconsNames = 'location' | 'sun';
+export type UtilityIconsNames = 'location' | 'sun' | 'arrowRight';
 
 export type IconNames =
   | StackIconNames
@@ -1313,6 +1333,7 @@ const iconsMap: IconsMap = {
   linkedin: LinkedIn,
   location: Location,
   sun: Sun,
+  arrowRight: ArrowRight,
   corellium: Corellium,
   pay: Pay,
   leadchat: Leadchat,

@@ -17,9 +17,10 @@ import { NavData } from 'data';
 // TODO add redirect for /work
 // TODO add back button to work pages
 // TODO check text color across app, maybe create Text and Heading components
-// TODO replace a links
+// // TODO replace a links
 // TODO check margin across app, use a consistent system
 // TODO check text and data
+// TODO add tailwind theme function
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

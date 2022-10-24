@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
 import { Container } from 'components/atoms/Container';
 import { EducationSection } from 'components/EducationSection';
+import { ExternalLink } from 'components/atoms/ExternalLink';
 
 const About: NextPage = () => {
   return (
@@ -10,28 +11,24 @@ const About: NextPage = () => {
       <div className="mb-24 flex flex-col gap-5 text-neutral-300">
         <p>
           I&apos;m currently working at{' '}
-          <a
-            target="_blank"
-            rel="noreferrer noopener"
+          <ExternalLink
             className="font-semibold underline"
             href="https://www.corellium.com/"
           >
             Corellium
-          </a>{' '}
+          </ExternalLink>{' '}
           helping refresh the platform after a succesful series A funding.
           I&apos;ve been enjoying working on many greenfileds projects and
           helping optimize and growing the current platform.
         </p>
         <p className="text-neutral-300">
           Previously I worked at{' '}
-          <a
+          <ExternalLink
             className="font-semibold underline"
             href="https://pay.com.au/"
-            target="_blank"
-            rel="noreferrer noopener"
           >
             Pay.com.au
-          </a>{' '}
+          </ExternalLink>{' '}
           where we used modern technologies like block-chain to create a payment
           platform for businesses.
         </p>
@@ -72,14 +69,12 @@ const About: NextPage = () => {
           <p>
             And I&apos;m a big fan of Techno and play at events when I get the
             chance. You can listen to some of my sets{' '}
-            <a
-              target="_blank"
-              rel="noreferrer noopener"
+            <ExternalLink
               href="https://www.zarbsound.com/"
               className="font-semibold underline"
             >
               here
-            </a>
+            </ExternalLink>
           </p>
         </div>
       </div>

@@ -5,6 +5,7 @@ import { workData } from 'data';
 import type { WorkCardProps } from 'components/atoms/WorkCard';
 import { Icons } from 'components/atoms/Icons';
 import { ProjectSection } from 'components/ProjectSection';
+import { ExternalLink } from 'components/atoms/ExternalLink';
 
 type CorelliumPageProps = {
   data: WorkCardProps;
@@ -65,14 +66,12 @@ const Corellium: FC<CorelliumPageProps> = ({ data }) => {
           </p>
           <p>
             Check it out{' '}
-            <a
-              target="_blank"
-              rel="noreferrer noopener"
+            <ExternalLink
               href="https://magic.corellium.design/"
               className="font-bold underline"
             >
               here
-            </a>
+            </ExternalLink>
           </p>
         </ProjectSection>
 
@@ -96,14 +95,12 @@ const Corellium: FC<CorelliumPageProps> = ({ data }) => {
           </p>
           <p>
             Check it out{' '}
-            <a
-              target="_blank"
-              rel="noreferrer noopener"
+            <ExternalLink
               href="https://www.corellium.com/"
               className="font-bold underline"
             >
               here
-            </a>
+            </ExternalLink>
           </p>
         </ProjectSection>
 

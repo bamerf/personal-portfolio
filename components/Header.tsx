@@ -3,6 +3,7 @@ import type { FC } from 'react';
 import Image from 'next/image';
 import { Icons } from './atoms/Icons';
 import type { IconNames } from './atoms/Icons';
+import { ExternalLink } from './atoms/ExternalLink';
 
 type SocialLink = {
   name: string;
@@ -50,15 +51,13 @@ export const Header: FC<HeaderProps> = ({
       </div>
       <div className="flex gap-3">
         {socialLinks.map((socialLink, index) => (
-          <a
+          <ExternalLink
             className="transition-all duration-100 ease-linear hover:-translate-y-1"
-            target="_blank"
             key={index}
             href={socialLink.url}
-            rel="noreferrer"
           >
             <Icons name={socialLink.iconName} size={24} fill="#525252" />
-          </a>
+          </ExternalLink>
         ))}
       </div>
     </div>

@@ -33,10 +33,10 @@ export const WorkCard: FC<WorkCardProps> = ({
           <Icons key={iconName + index} name={iconName} />
         ))}
       </div>
-      <a className="text-neutral-600" href="">
-        {/* Read More <Icons name="arrow" /> */}
+      <div className="flex items-baseline gap-1 text-neutral-600">
         Read More
-      </a>
+        <Icons name="arrowRight" fill="#525252" size={20} />
+      </div>
     </div>
   </div>
 );
