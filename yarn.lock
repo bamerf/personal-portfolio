@@ -38,10 +38,10 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@bamerf/linter@^1.0.2":
-  version "1.0.2"
-  resolved "https://npm.pkg.github.com/download/@bamerf/linter/1.0.2/f5a71619e88bc10ad2d6f086dafadff1ababa981#f5a71619e88bc10ad2d6f086dafadff1ababa981"
-  integrity sha512-GvDylHrGPCL5zEbT1C6dSFm306KAZBuFZ6YUBNN3F+/yIQQbywzLE+2vOZiRSYTnmUXl3JHmXZvyyagsAXsL5g==
+"@bamerf/linter@^1.0.4":
+  version "1.0.4"
+  resolved "https://npm.pkg.github.com/download/@bamerf/linter/1.0.4/0b7ce34554039d7888306bdab71d911be9bb2d44#0b7ce34554039d7888306bdab71d911be9bb2d44"
+  integrity sha512-FWoq/hIxlwOiDzrNnGgA5MBuZDri47wLAYY2myyQUyqDVoVzSPeujx6aVfGwN51PNi+nQjDLShScGq/MEonNUQ==
   dependencies:
     eslint-config-prettier "^8.5.0"
     stylelint-config-idiomatic-order "^8.1.0"

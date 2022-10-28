@@ -37,7 +37,6 @@ export const WorkCard: FC<WorkCardProps> = ({
         Read More
         <Icons
           name="arrowRight"
-          // fill="#525252"
           className="stroke-neutral-600 group-hover:stroke-neutral-500"
           size={20}
         />

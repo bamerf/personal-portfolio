@@ -2,6 +2,7 @@ import Link from 'next/link';
 import type { FC } from 'react';
 import type { NavLink } from 'components/Nav';
 import { CustomLink } from 'components/Nav';
+import { Icons } from 'components/atoms/Icons';
 
 type FooterProps = {
   navLinks: NavLink[];
@@ -19,6 +20,13 @@ export const Footer: FC<FooterProps> = ({ navLinks }) => (
               href={link.href}
               target="_blank"
               className="!text-neutral-600 hover:bg-transparent hover:!text-neutral-500"
+              icon={
+                <Icons
+                  name="arrowTopRight"
+                  className="stroke-neutral-600"
+                  size={10}
+                />
+              }
             />
           );
         }
