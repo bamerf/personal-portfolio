@@ -53,7 +53,7 @@ const About: NextPage = () => {
 
       <EducationSection className="!mb-24" />
 
-      <div className="mb-24">
+      <div className="mb-16 sm:mb-24">
         <h2 className="mb-6 text-3xl font-semibold">After Hours</h2>
         <div className="flex flex-col gap-5 text-neutral-300">
           <p>Outside of work, all my time is spent focusing on health.</p>

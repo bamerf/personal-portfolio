@@ -8,10 +8,10 @@ module.exports = {
   ],
   theme: {
     screens: {
-      mobile: pixelToRem(640),
-      tablet: pixelToRem(768),
-      laptop: pixelToRem(1024),
-      desktop: pixelToRem(1280),
+      sm: pixelToRem(384),
+      md: pixelToRem(525),
+      lg: pixelToRem(1024),
+      xlg: pixelToRem(1280),
     },
     extend: {
       fontSize: {
@@ -19,5 +19,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
 };

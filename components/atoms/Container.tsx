@@ -7,7 +7,7 @@ type ContainerProps = {
 };
 
 export const Container: FC<ContainerProps> = ({ children, className }) => (
-  <div className={clsx('mx-auto max-w-screen-mobile', className)}>
+  <div className={clsx('mx-auto max-w-[672px] px-8', className)}>
     {children}
   </div>
 );

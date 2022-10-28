@@ -1,6 +1,7 @@
 import type { GetStaticProps } from 'next';
 import type { FC } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { workData } from 'data';
 import type { WorkCardProps } from 'components/atoms/WorkCard';
 import { Icons } from 'components/atoms/Icons';
@@ -14,12 +15,17 @@ type CorelliumPageProps = {
 const Corellium: FC<CorelliumPageProps> = ({ data }) => {
   return (
     <div className="mb-16">
-      <div className="mb-16 flex flex-col gap-16">
+      <div className="mb-16 flex flex-col gap-8 sm:gap-16">
+        <Link href="/#work" passHref>
+          <a>
+            <Icons name="arrowLeftCircle" size={38} />
+          </a>
+        </Link>
         <div>
           <h1 className="text-4xl font-bold text-white">{data.name}</h1>
           <h1 className="text-4xl font-bold text-white">{data.title}</h1>
           <h1 className="text-4xl font-bold text-white">{data.date}</h1>
-          <div className="mt-3 mb-16 flex gap-3">
+          <div className="mt-3 mb-10 flex gap-3 sm:mb-16">
             {data.stack?.map((stack, index) => (
               <Icons name={stack} key={index} fill="#262626" size={28} />
             ))}
@@ -48,7 +54,7 @@ const Corellium: FC<CorelliumPageProps> = ({ data }) => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-24">
+      <div className="flex flex-col gap-16 sm:gap-24">
         <ProjectSection
           title="Component Library"
           imageNames={['corellium-magic-1.png', 'corellium-magic-2.png']}

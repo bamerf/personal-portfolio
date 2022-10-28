@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import type { FC } from 'react';
 
 type IndividualIconProps = {
   size?: string;
@@ -130,6 +130,24 @@ const ArrowRight: FC<IndividualIconProps> = ({ size, fill }) => {
     </svg>
   );
 };
+
+const ArrowLeftCircle: FC<IndividualIconProps> = ({ size, fill }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 32 32"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M16 10.6667L10.6667 16M10.6667 16L16 21.3334M10.6667 16H21.3333M29.3333 16C29.3333 23.3638 23.3638 29.3334 16 29.3334C8.63619 29.3334 2.66666 23.3638 2.66666 16C2.66666 8.63622 8.63619 2.66669 16 2.66669C23.3638 2.66669 29.3333 8.63622 29.3333 16Z"
+      stroke="#D9D9D9"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 
 const Corellium: FC<IndividualIconProps> = ({ size, fill, className }) => {
   return (
@@ -919,6 +937,7 @@ const TypeScript: FC<IndividualIconProps> = ({ size, fill, className }) => {
 const GA: FC<IndividualIconProps> = ({ size = '32', className }) => {
   return (
     <svg
+      className={className}
       width={size}
       height={size}
       viewBox="0 0 32 32"
@@ -945,9 +964,10 @@ const GA: FC<IndividualIconProps> = ({ size = '32', className }) => {
   );
 };
 
-const USYD: FC<IndividualIconProps> = ({ size, fill }) => {
+const USYD: FC<IndividualIconProps> = ({ size, fill, className }) => {
   return (
     <svg
+      className={className}
       width={size}
       height={size}
       viewBox="0 0 32 32"
@@ -1226,9 +1246,10 @@ const USYD: FC<IndividualIconProps> = ({ size, fill }) => {
   );
 };
 
-const AFTRS: FC<IndividualIconProps> = ({ size, fill }) => {
+const AFTRS: FC<IndividualIconProps> = ({ size, fill, className }) => {
   return (
     <svg
+      className={className}
       width={size}
       height={size}
       viewBox="0 0 32 32"
@@ -1260,9 +1281,10 @@ const AFTRS: FC<IndividualIconProps> = ({ size, fill }) => {
   );
 };
 
-const SFS: FC<IndividualIconProps> = ({ size, fill }) => {
+const SFS: FC<IndividualIconProps> = ({ size, fill, className }) => {
   return (
     <svg
+      className={className}
       width={size}
       height={size}
       viewBox="0 0 32 32"
@@ -1309,7 +1331,11 @@ export type CompanyIconNames =
 
 export type EducationIconNames = 'ga' | 'usyd' | 'aftrs' | 'sfs';
 
-export type UtilityIconsNames = 'location' | 'sun' | 'arrowRight';
+export type UtilityIconsNames =
+  | 'location'
+  | 'sun'
+  | 'arrowRight'
+  | 'arrowLeftCircle';
 
 export type IconNames =
   | StackIconNames
@@ -1334,6 +1360,7 @@ const iconsMap: IconsMap = {
   location: Location,
   sun: Sun,
   arrowRight: ArrowRight,
+  arrowLeftCircle: ArrowLeftCircle,
   corellium: Corellium,
   pay: Pay,
   leadchat: Leadchat,

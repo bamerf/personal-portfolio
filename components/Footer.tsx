@@ -8,8 +8,8 @@ type FooterProps = {
 };
 
 export const Footer: FC<FooterProps> = ({ navLinks }) => (
-  <footer className="flex items-center justify-between border-t-[1px] border-neutral-800 pt-8 pb-32">
-    <nav className="flex gap-2">
+  <footer className="flex flex-col items-center justify-between gap-4 border-t-[1px] border-neutral-800 pt-8 sm:flex-row sm:pb-32">
+    <nav className="flex gap-6 pb-16 sm:gap-2 sm:pb-0">
       {navLinks.map((link, index) => {
         if (link.label === 'Resume') {
           return (
@@ -33,6 +33,8 @@ export const Footer: FC<FooterProps> = ({ navLinks }) => (
         );
       })}
     </nav>
-    <p className="text-neutral-600">© 2022 Bamdad Erfanian</p>
+    <p className="mb-6 text-neutral-600 sm:mb-0">
+      © {new Date().getFullYear()} Bamdad Erfanian
+    </p>
   </footer>
 );

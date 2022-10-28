@@ -15,9 +15,7 @@ export const ProjectSection: FC<ProjectSectionProps> = ({
   return (
     <div>
       <h2 className="mb-4 text-3xl font-semibold">{title}</h2>
-      <div className="mb-10 flex flex-col gap-5 text-neutral-200">
-        {children}
-      </div>
+      <div className="flex flex-col gap-5 text-neutral-200">{children}</div>
       <div className="flex flex-col gap-8">
         {imageNames &&
           imageNames.length > 0 &&

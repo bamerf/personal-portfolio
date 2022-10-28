@@ -8,10 +8,12 @@ import { EducationSection } from 'components/EducationSection';
 
 const Home: NextPage = () => {
   return (
-    <div className="pb-12">
+    <div className="pb-8 sm:pb-12">
       <Header {...headerData} />
       <div className="mb-24">
-        <h2 className="mb-6 text-3xl font-semibold">Work</h2>
+        <h2 id="work" className="mb-6 text-3xl font-semibold">
+          Work
+        </h2>
         <div className="flex flex-col gap-8">
           {workData.map((work: WorkCardProps, index) => (
             <Link

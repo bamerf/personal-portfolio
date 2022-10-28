@@ -31,7 +31,7 @@ export const Header: FC<HeaderProps> = ({
   socialLinks,
   location,
 }) => (
-  <div className="mb-32">
+  <div className="mb-24 sm:mb-32">
     {image && (
       <div className="mb-4">
         <Image className=" rounded-full" {...image} alt={image.alt} />
@@ -42,7 +42,7 @@ export const Header: FC<HeaderProps> = ({
       {title.text} <span className="font-semibold">{title.company}</span>
     </h3>
     <p className="mb-6 max-w-xl text-neutral-400">{description}</p>
-    <div className="flex items-end justify-between">
+    <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
       <div className="flex items-center gap-1">
         <div className="animate-pulse">
           <Icons name="location" size={16} fill="#737373" />

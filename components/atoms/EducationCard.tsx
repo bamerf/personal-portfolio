@@ -15,9 +15,9 @@ export const EducationCard: FC<EducationCardProps> = ({
   date,
   iconName,
 }) => (
-  <div className="flex gap-3 rounded-md bg-neutral-800 p-6">
-    <Icons name={iconName} size={32} />
-    <div className="flex flex-col gap-1">
+  <div className="flex flex-col gap-3 rounded-md bg-neutral-800 p-6 sm:flex-row">
+    <Icons className="shrink-0" name={iconName} size={32} />
+    <div className="flex flex-col gap-2 sm:gap-1">
       <h2 className="text-xl font-bold text-neutral-200">{place}</h2>
       <h3 className="font-semibold text-neutral-300">{degree}</h3>
       <p className="text-neutral-600">{date}</p>

@@ -22,7 +22,7 @@ export const CustomLink = forwardRef<HTMLAnchorElement, CustomLinkProps>(
       ref={ref}
       href={href}
       className={clsx(
-        'cursor-pointer rounded-md py-2 px-3 text-neutral-400 hover:bg-neutral-800',
+        'cursor-pointer rounded-md text-neutral-400 sm:py-2 sm:px-3 sm:hover:bg-neutral-800',
         className
       )}
     >
@@ -46,8 +46,8 @@ export const Nav: FC<NavProps> = ({ navLinks }) => {
   const router = useRouter();
 
   return (
-    <div className="flex items-center justify-between pt-10 pb-32">
-      <nav className="flex gap-2">
+    <div className="flex flex-col items-baseline gap-8 pt-8 pb-28 sm:flex-row sm:items-center sm:justify-between sm:pt-10 sm:pb-32">
+      <nav className="flex gap-8 sm:gap-2">
         {navLinks.map((link, index) => {
           if (link.label === 'Resume') {
             return (
