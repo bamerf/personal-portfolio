@@ -19,7 +19,7 @@ export const WorkCard: FC<WorkCardProps> = ({
   description,
   stack,
 }) => (
-  <div className="flex flex-col justify-between gap-4 rounded-md bg-neutral-800 p-6 transition-all duration-75 ease-linear hover:bg-neutral-700 md:flex-row">
+  <div className="group flex flex-col justify-between gap-4 rounded-md bg-neutral-800 p-6 transition-all duration-75 ease-linear hover:scale-101 hover:bg-neutral-700/40  md:flex-row">
     <div>
       <Icons className="mb-2" name={iconName} size={32} />
       <h1 className="text-xl font-bold text-neutral-200">{name}</h1>
@@ -33,9 +33,14 @@ export const WorkCard: FC<WorkCardProps> = ({
           <Icons key={iconName + index} name={iconName} />
         ))}
       </div>
-      <div className="flex items-center gap-1 text-neutral-600">
+      <div className="flex items-center gap-1 text-neutral-600 group-hover:text-neutral-500">
         Read More
-        <Icons name="arrowRight" fill="#525252" size={20} />
+        <Icons
+          name="arrowRight"
+          // fill="#525252"
+          className="stroke-neutral-600 group-hover:stroke-neutral-500"
+          size={20}
+        />
       </div>
     </div>
   </div>

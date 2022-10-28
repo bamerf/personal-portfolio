@@ -17,6 +17,10 @@ module.exports = {
       fontSize: {
         fluid: 'clamp(1.5rem, 3vw + 1.45rem, 2.75rem)',
       },
+      scale: {
+        101: '1.01',
+        102: '1.02',
+      },
     },
   },
   plugins: [require('@tailwindcss/line-clamp')],

@@ -1,9 +1,9 @@
 import clsx from 'clsx';
 import Link from 'next/link';
 import { forwardRef } from 'react';
-import type { FC } from 'react';
+import type { FC, ReactNode } from 'react';
 import { useRouter } from 'next/router';
-import { Icons } from './atoms/Icons';
+import { Icons } from 'components/atoms/Icons';
 
 type CustomLinkProps = {
   label: string;
@@ -11,22 +11,24 @@ type CustomLinkProps = {
   className?: string;
   onClick?: () => void;
   target?: string;
+  icon?: ReactNode;
 };
 
 // TODO spread HTMLAnchorElement props correctly to the anchor element
 export const CustomLink = forwardRef<HTMLAnchorElement, CustomLinkProps>(
-  ({ label, href, className, onClick, target }: CustomLinkProps, ref) => (
+  ({ label, href, className, onClick, target, icon }: CustomLinkProps, ref) => (
     <a
       target={target}
       onClick={onClick}
       ref={ref}
       href={href}
       className={clsx(
-        'cursor-pointer rounded-md text-neutral-400 sm:py-2 sm:px-3 sm:hover:bg-neutral-800',
+        'flex cursor-pointer items-center gap-2 rounded-md text-neutral-400 sm:py-2 sm:px-3 sm:hover:bg-neutral-800',
         className
       )}
     >
       {label}
+      {icon && icon}
     </a>
   )
 );
@@ -51,12 +53,14 @@ export const Nav: FC<NavProps> = ({ navLinks }) => {
         {navLinks.map((link, index) => {
           if (link.label === 'Resume') {
             return (
-              <CustomLink
-                key={index}
-                label={link.label}
-                href={link.href}
-                target="_blank"
-              />
+              <div key={index}>
+                <CustomLink
+                  label={link.label}
+                  href={link.href}
+                  target="_blank"
+                  icon={<Icons name="arrowTopRight" size={10} />}
+                />
+              </div>
             );
           }
 

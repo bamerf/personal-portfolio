@@ -111,9 +111,10 @@ const Sun: FC<IndividualIconProps> = ({ size, fill }) => {
   );
 };
 
-const ArrowRight: FC<IndividualIconProps> = ({ size, fill }) => {
+const ArrowRight: FC<IndividualIconProps> = ({ size, fill, className }) => {
   return (
     <svg
+      className={className}
       width={size}
       height={size}
       viewBox="0 0 24 24"
@@ -121,6 +122,7 @@ const ArrowRight: FC<IndividualIconProps> = ({ size, fill }) => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
+        className={className}
         d="M5 12H19M19 12L12 5M19 12L12 19"
         stroke={fill}
         strokeWidth="2"
@@ -130,6 +132,26 @@ const ArrowRight: FC<IndividualIconProps> = ({ size, fill }) => {
     </svg>
   );
 };
+
+const ArrowTopRight: FC<IndividualIconProps> = ({ size, fill, className }) => (
+  <svg
+    className={className}
+    width={size}
+    height={size}
+    viewBox="0 0 22 22"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      className={className}
+      d="M1 21L21 1M21 1H1M21 1V21"
+      stroke="#D9D9D9"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
 
 const ArrowLeftCircle: FC<IndividualIconProps> = ({ size, fill }) => (
   <svg
@@ -1335,7 +1357,8 @@ export type UtilityIconsNames =
   | 'location'
   | 'sun'
   | 'arrowRight'
-  | 'arrowLeftCircle';
+  | 'arrowLeftCircle'
+  | 'arrowTopRight';
 
 export type IconNames =
   | StackIconNames
@@ -1361,6 +1384,7 @@ const iconsMap: IconsMap = {
   sun: Sun,
   arrowRight: ArrowRight,
   arrowLeftCircle: ArrowLeftCircle,
+  arrowTopRight: ArrowTopRight,
   corellium: Corellium,
   pay: Pay,
   leadchat: Leadchat,
