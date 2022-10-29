@@ -2,10 +2,10 @@ import type { GetStaticProps } from 'next';
 import type { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { neutral } from 'tailwindcss/colors';
 import { workData } from 'data';
 import type { WorkCardProps } from 'components/atoms/WorkCard';
 import { Icons } from 'components/atoms/Icons';
-import { ProjectSection } from 'components/ProjectSection';
 import { ExternalLink } from 'components/atoms/ExternalLink';
 
 type BackifiPageProps = {
@@ -27,7 +27,7 @@ const Backifi: FC<BackifiPageProps> = ({ data }) => {
           <h1 className="text-4xl font-bold text-white">{data.date}</h1>
           <div className="mt-3 mb-10 flex gap-3 sm:mb-16">
             {data.stack?.map((stack, index) => (
-              <Icons name={stack} key={index} fill="#262626" size={28} />
+              <Icons name={stack} key={index} fill={neutral[800]} size={28} />
             ))}
           </div>
           <Image
@@ -61,8 +61,9 @@ const Backifi: FC<BackifiPageProps> = ({ data }) => {
               href="https://www.backifi.com/"
               className="font-bold underline"
             >
-              app
+              app here
             </ExternalLink>
+            .
           </p>
         </div>
       </div>

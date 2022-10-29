@@ -1,25 +1,26 @@
 import Image from 'next/image';
-import type { FC } from 'react';
+import type { FC, ReactNode } from 'react';
 
 type ProjectSectionProps = {
   title: string;
   children: React.ReactNode;
   imageNames?: string[];
+  links?: ReactNode;
 };
 
 export const ProjectSection: FC<ProjectSectionProps> = ({
   title,
   children,
   imageNames,
+  links,
 }) => {
   return (
-    <div>
-      <h2 className="mb-4 text-3xl font-semibold">{title}</h2>
+    <div className="flex flex-col gap-8">
+      <h2 className="text-3xl font-semibold">{title}</h2>
       <div className="flex flex-col gap-5 text-neutral-200">{children}</div>
-      <div className="flex flex-col gap-8">
-        {imageNames &&
-          imageNames.length > 0 &&
-          imageNames.map((image, index) => (
+      {imageNames && imageNames.length > 0 && (
+        <div className="flex flex-col gap-8">
+          {imageNames.map((image, index) => (
             <Image
               key={index}
               className="rounded-md"
@@ -29,7 +30,9 @@ export const ProjectSection: FC<ProjectSectionProps> = ({
               alt=""
             />
           ))}
-      </div>
+        </div>
+      )}
+      {links && links}
     </div>
   );
 };

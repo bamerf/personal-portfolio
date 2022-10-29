@@ -2,6 +2,7 @@ import type { GetStaticProps } from 'next';
 import type { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { neutral } from 'tailwindcss/colors';
 import { workData } from 'data';
 import type { WorkCardProps } from 'components/atoms/WorkCard';
 import { Icons } from 'components/atoms/Icons';
@@ -11,6 +12,32 @@ import { ExternalLink } from 'components/atoms/ExternalLink';
 type CorelliumPageProps = {
   data: WorkCardProps;
 };
+
+const ComponentLibraryLink = () => (
+  <p>
+    Check out the{' '}
+    <ExternalLink
+      className="font-bold underline"
+      href="https://magic.corellium.design/"
+    >
+      Component Library here
+    </ExternalLink>{' '}
+    .
+  </p>
+);
+
+const WebsiteLink = () => (
+  <p>
+    Check out the{' '}
+    <ExternalLink
+      className="font-bold underline"
+      href="https://www.corellium.com/"
+    >
+      Website here
+    </ExternalLink>{' '}
+    .
+  </p>
+);
 
 const Corellium: FC<CorelliumPageProps> = ({ data }) => {
   return (
@@ -27,7 +54,7 @@ const Corellium: FC<CorelliumPageProps> = ({ data }) => {
           <h1 className="text-4xl font-bold text-white">{data.date}</h1>
           <div className="mt-3 mb-10 flex gap-3 sm:mb-16">
             {data.stack?.map((stack, index) => (
-              <Icons name={stack} key={index} fill="#262626" size={28} />
+              <Icons name={stack} key={index} fill={neutral[800]} size={28} />
             ))}
           </div>
           <Image
@@ -39,7 +66,7 @@ const Corellium: FC<CorelliumPageProps> = ({ data }) => {
           />
         </div>
 
-        <div className="flex flex-col gap-5 text-neutral-300">
+        <div className="flex flex-col gap-5 text-neutral-200">
           <p>
             I joined Corellium to help the Product and Core engineering team
             take the platform and the codebase from a succesful start-up to an
@@ -58,6 +85,7 @@ const Corellium: FC<CorelliumPageProps> = ({ data }) => {
         <ProjectSection
           title="Component Library"
           imageNames={['corellium-magic-1.png', 'corellium-magic-2.png']}
+          links={<ComponentLibraryLink />}
         >
           <p>
             We designed and built a modern, accessible and responsive design
@@ -70,20 +98,12 @@ const Corellium: FC<CorelliumPageProps> = ({ data }) => {
             products, while making sure that it is easy to use and update for
             the engineers.
           </p>
-          <p>
-            Check it out{' '}
-            <ExternalLink
-              href="https://magic.corellium.design/"
-              className="font-bold underline"
-            >
-              here
-            </ExternalLink>
-          </p>
         </ProjectSection>
 
         <ProjectSection
           title="Website"
           imageNames={['corellium-magic-1.png', 'corellium-magic-2.png']}
+          links={<WebsiteLink />}
         >
           <p>
             As part of this project we re-designed and re-built the
@@ -98,15 +118,6 @@ const Corellium: FC<CorelliumPageProps> = ({ data }) => {
             We used TypeScipt and NextJS as the main technologies and used
             Tailwind to manage styling and responsiveness. And we used headless
             CMS to manage the content.
-          </p>
-          <p>
-            Check it out{' '}
-            <ExternalLink
-              href="https://www.corellium.com/"
-              className="font-bold underline"
-            >
-              here
-            </ExternalLink>
           </p>
         </ProjectSection>
 

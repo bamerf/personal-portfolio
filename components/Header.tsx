@@ -1,6 +1,7 @@
 import type { ImageProps } from 'next/image';
 import type { FC } from 'react';
 import Image from 'next/image';
+import { neutral } from 'tailwindcss/colors';
 import { Icons } from './atoms/Icons';
 import type { IconNames } from './atoms/Icons';
 import { ExternalLink } from './atoms/ExternalLink';
@@ -45,7 +46,7 @@ export const Header: FC<HeaderProps> = ({
     <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
       <div className="flex items-center gap-1">
         <div className="animate-pulse">
-          <Icons name="location" size={16} fill="#737373" />
+          <Icons name="location" size={16} fill={neutral[500]} />
         </div>
         <p className=" text-sm text-neutral-500">Currently in {location}</p>
       </div>
@@ -56,7 +57,7 @@ export const Header: FC<HeaderProps> = ({
             key={index}
             href={socialLink.url}
           >
-            <Icons name={socialLink.iconName} size={24} fill="#525252" />
+            <Icons name={socialLink.iconName} size={24} fill={neutral[600]} />
           </ExternalLink>
         ))}
       </div>

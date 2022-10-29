@@ -2,6 +2,7 @@ import type { GetStaticProps } from 'next';
 import type { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { neutral } from 'tailwindcss/colors';
 import { workData } from 'data';
 import type { WorkCardProps } from 'components/atoms/WorkCard';
 import { Icons } from 'components/atoms/Icons';
@@ -11,6 +12,26 @@ import { ExternalLink } from 'components/atoms/ExternalLink';
 type LeadchatPageProps = {
   data: WorkCardProps;
 };
+
+const ComponentLibraryLinks = () => (
+  <p>
+    Check out the{' '}
+    <ExternalLink
+      className="font-bold underline"
+      href="https://www.figma.com/file/xl28rT9nlkuB1YHjSQQv8a/Bam-Erfanian---Design-System-Template"
+    >
+      Design System
+    </ExternalLink>{' '}
+    and the{' '}
+    <ExternalLink
+      className="font-bold underline"
+      href="https://design-system-zeta.vercel.app/"
+    >
+      Component Library
+    </ExternalLink>
+    .
+  </p>
+);
 
 const Leadchat: FC<LeadchatPageProps> = ({ data }) => {
   return (
@@ -27,7 +48,7 @@ const Leadchat: FC<LeadchatPageProps> = ({ data }) => {
           <h1 className="text-4xl font-bold text-white">{data.date}</h1>
           <div className="mt-3 mb-10 flex gap-3 sm:mb-16">
             {data.stack?.map((stack, index) => (
-              <Icons name={stack} key={index} fill="#262626" size={28} />
+              <Icons name={stack} key={index} fill={neutral[800]} size={28} />
             ))}
           </div>
           <Image
@@ -85,6 +106,7 @@ const Leadchat: FC<LeadchatPageProps> = ({ data }) => {
         <ProjectSection
           title="Component Library"
           imageNames={['leadchat-ui-2.png', 'leadchat-ui-3.png']}
+          links={<ComponentLibraryLinks />}
         >
           <p>
             I had the pleasure to design and build my first component library at
@@ -95,23 +117,6 @@ const Leadchat: FC<LeadchatPageProps> = ({ data }) => {
             I used Storybook to create a living documentation of the components
             and styled-components to create a theme that could be used across
             the platform.
-          </p>
-          <p>
-            Check out the{' '}
-            <ExternalLink
-              className="font-bold underline"
-              href="https://www.figma.com/file/xl28rT9nlkuB1YHjSQQv8a/Bam-Erfanian---Design-System-Template"
-            >
-              Design System
-            </ExternalLink>{' '}
-            and the{' '}
-            <ExternalLink
-              className="font-bold underline"
-              href="https://design-system-zeta.vercel.app/"
-            >
-              Component Library
-            </ExternalLink>
-            .
           </p>
         </ProjectSection>
 

@@ -20,8 +20,8 @@ import { NavData } from 'data';
 // // TODO replace a links
 // // TODO check margin across app, use a consistent system
 // TODO check text and data
-// TODO add tailwind theme function and replace harcoded values
-// TOdo check purge css
+// // TODO add tailwind theme function and replace harcoded values
+// // TOdo check purge css
 // TODO organise icons
 // TODO create hamburger menu
 // TODO add color theme creator
