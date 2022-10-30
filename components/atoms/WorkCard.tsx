@@ -1,15 +1,8 @@
 import type { FC } from 'react';
 import { Icons } from './Icons';
-import type { IconNames, StackIconNames } from './Icons';
+import type { WorkData } from 'data/work';
 
-export type WorkCardProps = {
-  name: string;
-  title: string;
-  description: string;
-  iconName: IconNames;
-  date: string;
-  stack?: StackIconNames[];
-};
+type WorkCardProps = WorkData;
 
 export const WorkCard: FC<WorkCardProps> = ({
   name,
