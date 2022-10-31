@@ -3,6 +3,7 @@ import type { FC, ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { neutral } from 'tailwindcss/colors';
+import clsx from 'clsx';
 import { paths, workData } from 'data';
 import { Icons } from 'components/atoms/Icons';
 import { ProjectSection } from 'components/ProjectSection';
@@ -47,17 +48,25 @@ const Corellium: FC<CorelliumPageProps> = ({ data }) => {
               <Icons name={stack} key={index} fill={neutral[800]} size={28} />
             ))}
           </div>
-
-          <Image
-            className="rounded-md"
-            src={data.mainImage.src}
-            width={data.mainImage.width}
-            height={data.mainImage.height}
-            alt={data.mainImage.alt}
-          />
+          <div
+            className={clsx(
+              'rounded-lg border-2 border-neutral-200 leading-[0px] dark:border-transparent',
+              {
+                'border-0': data.name === 'Pay.com.au',
+              }
+            )}
+          >
+            <Image
+              className="rounded-md"
+              src={data.mainImage.src}
+              width={data.mainImage.width}
+              height={data.mainImage.height}
+              alt={data.mainImage.alt}
+            />
+          </div>
         </div>
 
-        <div className="flex flex-col gap-5 text-neutral-200">
+        <div className="flex flex-col gap-5 text-neutral-700 dark:text-neutral-300">
           {data.intro.map((intro, index) => {
             if (typeof intro === 'string') {
               return <p key={index}>{intro}</p>;
@@ -75,7 +84,7 @@ const Corellium: FC<CorelliumPageProps> = ({ data }) => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-16 sm:gap-24">
+      <div className="flex flex-col gap-16 sm:gap-16">
         {data?.projects?.map((project, index) => (
           <ProjectSection
             key={index}
@@ -102,9 +111,11 @@ const Corellium: FC<CorelliumPageProps> = ({ data }) => {
 
         {data.more && (
           <div>
-            <h2 className="mb-4 text-3xl font-semibold">{data.more.title}</h2>
+            <h2 className="mb-4 text-3xl font-semibold text-neutral-800 dark:text-neutral-200">
+              {data.more.title}
+            </h2>
 
-            <div className="flex flex-col gap-5 text-neutral-300">
+            <div className="flex flex-col gap-5 text-neutral-700 dark:text-neutral-300">
               <p>{data.more.description}</p>
               <ul className="ml-8 flex flex-col gap-2 [&>li]:list-disc">
                 {data.more.projects.map((project, index) => (

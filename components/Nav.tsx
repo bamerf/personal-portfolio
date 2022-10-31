@@ -4,6 +4,7 @@ import { forwardRef } from 'react';
 import type { FC, ReactNode } from 'react';
 import { useRouter } from 'next/router';
 import { useTheme } from 'next-themes';
+import { neutral } from 'tailwindcss/colors';
 import { Icons } from 'components/atoms/Icons';
 
 type CustomLinkProps = {
@@ -88,7 +89,7 @@ export const Nav: FC<NavProps> = ({ navLinks }) => {
       <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
         {theme === 'light' ? (
           <div className="rounded-lg bg-gray-800 p-2">
-            <Icons name="sun" size={18} />
+            <Icons name="moon" size={18} fill={neutral[300]} />
           </div>
         ) : (
           <div className="rounded-lg bg-gray-300 p-2">

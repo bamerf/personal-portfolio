@@ -36,7 +36,7 @@ export const workData: WorkData[] = [
     date: 'Nov 2021 - Present',
     iconName: 'corellium',
     description:
-      'Member of the Product and Core engineering team. Helped creating companys UI library, rebuilt the marketing website, helped clear 2 years of tech dept.',
+      "Member of the Product and Core engineering teams. Helped creating the company's UI library, rebuilt the marketing website and many more.",
     stack: [
       'typescript',
       'react',
@@ -76,18 +76,18 @@ export const workData: WorkData[] = [
         ],
         description: [
           'We designed and built a modern, accessible and responsive design system and UI library in order to bring a fresh look to the platform.',
-          ' We used the TypeScript, React, Sotrybook and modern design patterns to create the UI library so it could be used across all company products, while making sure that it is easy to use and update for the engineers.',
+          ' We used TypeScript, React, Sotrybook and modern design patterns to create a UI library that could be used across all company products, while making sure it is easy to use and update for the engineers.',
         ],
         links: [
           {
             text: 'View',
             href: 'https://magic.corellium.design/',
-            hrefLabel: 'Corellium UI Library',
+            hrefLabel: 'Magic UI Library',
           },
         ],
       },
       {
-        title: 'Webstie',
+        title: 'Website',
         images: [
           {
             src: '/images/corellium-website-1.png',
@@ -103,9 +103,9 @@ export const workData: WorkData[] = [
           },
         ],
         description: [
-          'As part of this project we re-designed and re-built the company&apos;s website using our new UI library.',
-          'I personally took charge and delivered this project before it&apos;s due date while being able to contribute to our UI library as I was using it.',
-          'We used TypeScipt and NextJS as the main technologies and used Tailwind to manage styling and responsiveness. And we used headless CMS to manage the content.',
+          "As part of this project we re-designed and re-built the company's website using our new UI library.",
+          "I personally took charge and delivered this project before it's due date while being able to contribute to our UI library as I was using it.",
+          'We used TypeScript and NextJS as the main technologies, used Tailwind to manage styling and responsiveness and we used headless CMS to manage the content.',
         ],
         links: [
           {
@@ -123,7 +123,7 @@ export const workData: WorkData[] = [
       projects: [
         'Completed two years of tech debt',
         'Converted the codebase from JavaScript to TypeScript',
-        'Added modularization to the styling',
+        "Added styling modularisation to the app's components",
         'Refactored and cleaned up thousands of lines of code',
         'And fixed/completed countless bugs and tickets',
       ],
@@ -135,7 +135,7 @@ export const workData: WorkData[] = [
     title: 'Full Stack Developer',
     date: 'Nov 2020 - Nov 2021',
     description:
-      'Member of the Product and Core engineering team. Helped creating companys UI library, rebuilt the marketing website, helped clear 2 years of tech dept.',
+      'Founding member on the engineering team, I helped the first release of the product and was responsible for numerous features and teams.',
     stack: ['typescript', 'react', 'nodejs', 'apollo', 'mongodb'],
     mainImage: {
       src: '/images/pay-main.png',
@@ -145,8 +145,8 @@ export const workData: WorkData[] = [
     },
     intro: [
       'I joined the Pay team with the goal of moving the product from an MVP to a fully fledged payment platform.',
-      'I worked closely with the CTO on all the different parts of the product. I was responsible for the frontend, backend, and the infrastructure alongside the CTO and I also worked on the design of the product.',
-      "Our aim was to create a robust and secure codebase. We used block-chain technology to manage our ledgers and had a code audit process for every step of the user's actions.",
+      'I worked closely with the CTO on all the different parts of the product. I was responsible for the frontend, backend, and the infrastructure alongside the CTO, while also worked on the design of the product.',
+      'Our aim was to create a robust and secure codebase. We used block-chain technology to manage our ledgers and had a code audit process for every user action. We also focused heavily on validation and testing both the frontend and the backend.',
       'Here are some of the projects I had the pleasure worked on.',
     ],
     projects: [
@@ -191,7 +191,7 @@ export const workData: WorkData[] = [
     title: 'Full Stack Developer',
     date: 'May 2021 - Present',
     description:
-      'Member of the Product and Core engineering team. Helped creating companys UI library, rebuilt the marketing website, helped clear 2 years of tech dept.',
+      'Head of the engineering team responsible for multiple products. I built a handful of internal platforms and helped grow and maintain the core product.',
     stack: [
       'react',
       'nodejs',
@@ -208,17 +208,17 @@ export const workData: WorkData[] = [
       alt: 'leadchat platform',
     },
     intro: [
-      'Leadchat presented an amazing growth opportunity for me as developer as I was the sole developer on the platform tasked to build many new tools as well as take charge of the codebase moved to more modern technologies and languages.',
-      'I was responsible for the frontend, backend, design and the infrastructure of all the tools, and helped turn many business ideas into tools that were used both by clients and staff.',
+      'Leadchat presented an amazing growth opportunity for me as developer as I was the sole developer on the platform tasked to build many new tools as well as take charge of moving the codebase to more modern technologies and languages.',
+      'I was responsible for the frontend, backend, design and the infrastructure of all the products, and helped turn many business ideas into tools that were used both by clients and employees.',
       'Here are some of the projects and tools I had the pleasure worked',
     ],
     projects: [
       {
         title: 'Performance Analysis App',
         description: [
-          'One of the first tasks I was given was to create a tool that would help the business evaluate the performance of the support team and the quality of the support provided to clients.',
+          'One of the first tasks I was given was to create a tool that would help the business evaluate the performance of the support team and the quality of the support provided to the clients.',
           'I worked closely with other departments to create a set of performance metrics that could promote healthy competition between the support team and help the business identify areas of improvement.',
-          'Using these metrics I was able to create an app where each memeber could be rated by their peers and the results would be displayed in a leaderboard.',
+          'Using these metrics I was able to create an app where each memeber could be rated by their manager and the results would be displayed in a leaderboard.',
           'I was responsible for the design, data modeling, frontend and backend, insfrastructure, CI/CD and hosting.',
         ],
       },
@@ -240,7 +240,7 @@ export const workData: WorkData[] = [
         ],
         description: [
           'I had the pleasure to design and build my first component library at Leadchat with the aim of unifying the design language of the platform.',
-          'I used Storybook to create a living documentation of the components and styled-components to create a theme that could be used across the platform.',
+          'I used Storybook to create a living documentation of the components and styled-components to create a theme that could easily be updated.',
         ],
         links: [
           {
@@ -259,11 +259,11 @@ export const workData: WorkData[] = [
     more: {
       title: 'More...',
       description:
-        'In addition to the project above, I worked on many smaller initiatives, projects and features, some of which are listed below',
+        'In addition to the projects above, I worked on many smaller initiatives, projects and features, some of which are listed below',
       projects: [
         'Created an email system compatible with all browsers and clients.',
-        'Built a number of reporting and analysis tools.',
-        'Took responsibility for a newly developed platform with a lot of rough edges.',
+        'Built a number of automated reporting and analysis tools.',
+        'Took responsibility for improving a newly developed platform with a lot of rough edges.',
       ],
     },
   },
@@ -273,7 +273,7 @@ export const workData: WorkData[] = [
     date: 'May 2021 - Present',
     iconName: 'backifi',
     description:
-      'Member of the Product and Core engineering team. Helped creating companys UI library, rebuilt the marketing website, helped clear 2 years of tech dept.',
+      'Co-developer on the initial engineering team, responsible for designing, architecting and building the fastest growing product in the company.',
     stack: ['react', 'nodejs', 'postgres', 'circleci', 'docker', 'aws'],
     mainImage: {
       src: '/images/backifi-main.png',
@@ -282,8 +282,8 @@ export const workData: WorkData[] = [
       alt: 'backifi platform',
     },
     intro: [
-      'At PoweredLocal I was tasked with creating a tool that would be essential to the success of the business. The tool was used as a companion to the service offered by the business and was quickly became one of the fastest growing products in the company.',
-      'I co-developed this tool with another developer and we worked closely on all aspects of the product. We were responsible for the design, development, and deployment of the app.',
+      'At PoweredLocal I was tasked with creating a tool that would be essential to the success of the business. The tool was used as a companion to the services offered by the business and quickly became one of the fastest growing products in the company.',
+      'I planned and co-developed this app from scratch, working closely on all aspects of the product. We were responsible for the design, development, and deployment of the app.',
       'I personally took charge of integrating with six different storage platforms including Google Drive, Dropbox, and Microsoft OneDrive.',
       {
         text: 'View the',

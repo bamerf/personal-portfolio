@@ -1,11 +1,10 @@
 import { NextPage } from 'next';
-import { Container } from 'components/atoms/Container';
 import { EducationSection } from 'components/EducationSection';
 import { ExternalLink } from 'components/atoms/ExternalLink';
 
 const About: NextPage = () => {
   return (
-    <div>
+    <>
       <h1 className="mb-16 text-4xl font-bold text-black dark:text-white">
         About
       </h1>
@@ -19,9 +18,9 @@ const About: NextPage = () => {
           >
             Corellium
           </ExternalLink>{' '}
-          helping refresh the platform after a succesful series A funding.
-          I&apos;ve been enjoying working on many greenfileds projects and
-          helping optimize and growing the current platform.
+          helping refresh the look of the platform after a successful series A
+          funding. I&apos;ve been enjoying working on many greenfield projects
+          and helping optimise and growing the current platform.
         </p>
         <p>
           Previously I worked at{' '}
@@ -83,7 +82,7 @@ const About: NextPage = () => {
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
