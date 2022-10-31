@@ -2,6 +2,7 @@ const pixelToRem = (px) => `${px / 16}rem`;
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
@@ -13,6 +14,9 @@ module.exports = {
       lg: pixelToRem(1024),
       xlg: pixelToRem(1280),
     },
+    textShadow: {
+      default: '0 0 0.5px black, 0 0 0.8px black',
+    },
     extend: {
       fontSize: {
         fluid: 'clamp(1.5rem, 3vw + 1.45rem, 2.75rem)',
@@ -23,5 +27,8 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/line-clamp')],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+    require('tailwindcss-textshadow'),
+  ],
 };

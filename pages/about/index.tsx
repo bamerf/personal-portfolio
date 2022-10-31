@@ -6,9 +6,11 @@ import { ExternalLink } from 'components/atoms/ExternalLink';
 const About: NextPage = () => {
   return (
     <div>
-      <h1 className="mb-16 text-4xl font-bold text-white">About</h1>
+      <h1 className="mb-16 text-4xl font-bold text-black dark:text-white">
+        About
+      </h1>
 
-      <div className="mb-24 flex flex-col gap-5 text-neutral-300">
+      <div className="mb-24 flex flex-col gap-5 text-neutral-700 dark:text-neutral-300">
         <p>
           I&apos;m currently working at{' '}
           <ExternalLink
@@ -21,7 +23,7 @@ const About: NextPage = () => {
           I&apos;ve been enjoying working on many greenfileds projects and
           helping optimize and growing the current platform.
         </p>
-        <p className="text-neutral-300">
+        <p>
           Previously I worked at{' '}
           <ExternalLink
             className="font-semibold underline"
@@ -54,8 +56,10 @@ const About: NextPage = () => {
       <EducationSection className="!mb-24" />
 
       <div className="mb-16 sm:mb-24">
-        <h2 className="mb-6 text-3xl font-semibold">After Hours</h2>
-        <div className="flex flex-col gap-5 text-neutral-300">
+        <h2 className="mb-6 text-3xl font-semibold text-neutral-800 dark:text-neutral-200">
+          After Hours
+        </h2>
+        <div className="flex flex-col gap-5 text-neutral-700 dark:text-neutral-300">
           <p>Outside of work, all my time is spent focusing on health.</p>
           <p>
             For physical health, I do weight training and Bikram Yoga. For
@@ -75,6 +79,7 @@ const About: NextPage = () => {
             >
               here
             </ExternalLink>
+            .
           </p>
         </div>
       </div>

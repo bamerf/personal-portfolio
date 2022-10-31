@@ -28,8 +28,12 @@ const Corellium: FC<CorelliumPageProps> = ({ data }) => {
     <div className="mb-16">
       <div className="mb-16 flex flex-col gap-8 sm:gap-16">
         <Link href="/#work" passHref>
-          <a>
-            <Icons name="arrowLeftCircle" size={38} />
+          <a className="w-fit">
+            <Icons
+              name="arrowLeftCircle"
+              size={38}
+              className="stroke-neutral-300 dark:stroke-neutral-300"
+            />
           </a>
         </Link>
 

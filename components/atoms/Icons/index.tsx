@@ -1,15 +1,17 @@
 import type { FC } from 'react';
+import { neutral } from 'tailwindcss/colors';
 
 type IndividualIconProps = {
   size?: string;
   fill: string;
   className?: string;
-  theme: 'light' | 'dark';
+  theme: string;
 };
 
-const Github: FC<IndividualIconProps> = ({ size, fill }) => {
+const Github: FC<IndividualIconProps> = ({ size, fill, className }) => {
   return (
     <svg
+      className={className}
       width={size}
       height={size}
       viewBox="0 0 24 24"
@@ -18,6 +20,7 @@ const Github: FC<IndividualIconProps> = ({ size, fill }) => {
     >
       <g clipPath="url(#clip0_1507_257962)">
         <path
+          className={className}
           fillRule="evenodd"
           clipRule="evenodd"
           d="M12 0C5.3724 0 0 5.3808 0 12.0204C0 17.3304 3.438 21.8364 8.2068 23.4252C8.8068 23.5356 9.0252 23.1648 9.0252 22.8456C9.0252 22.5612 9.0156 21.804 9.0096 20.802C5.6712 21.528 4.9668 19.1904 4.9668 19.1904C4.422 17.8008 3.6348 17.4312 3.6348 17.4312C2.5452 16.6872 3.7176 16.7016 3.7176 16.7016C4.9212 16.7856 5.5548 17.94 5.5548 17.94C6.6252 19.776 8.364 19.2456 9.0468 18.9384C9.1572 18.162 9.4668 17.6328 9.81 17.3328C7.146 17.0292 4.344 15.9972 4.344 11.3916C4.344 10.08 4.812 9.006 5.5788 8.166C5.4552 7.8624 5.0436 6.6396 5.6964 4.986C5.6964 4.986 6.7044 4.662 8.9964 6.2172C9.97532 5.95022 10.9853 5.81423 12 5.8128C13.02 5.8176 14.046 5.9508 15.0048 6.2172C17.2956 4.662 18.3012 4.9848 18.3012 4.9848C18.9564 6.6396 18.5436 7.8624 18.4212 8.166C19.1892 9.006 19.6548 10.08 19.6548 11.3916C19.6548 16.0092 16.848 17.0256 14.1756 17.3232C14.6064 17.694 14.9892 18.4272 14.9892 19.5492C14.9892 21.1548 14.9748 22.452 14.9748 22.8456C14.9748 23.1672 15.1908 23.5416 15.8004 23.424C18.19 22.6225 20.2672 21.0904 21.7386 19.0441C23.2099 16.9977 24.001 14.5408 24 12.0204C24 5.3808 18.6264 0 12 0Z"
@@ -33,9 +36,10 @@ const Github: FC<IndividualIconProps> = ({ size, fill }) => {
   );
 };
 
-const LinkedIn: FC<IndividualIconProps> = ({ size, fill }) => {
+const LinkedIn: FC<IndividualIconProps> = ({ size, fill, className }) => {
   return (
     <svg
+      className={className}
       width={size}
       height={size}
       viewBox="0 0 24 24"
@@ -44,6 +48,7 @@ const LinkedIn: FC<IndividualIconProps> = ({ size, fill }) => {
     >
       <g clipPath="url(#clip0_1422_1143)">
         <path
+          className={className}
           d="M22.2234 0H1.77187C0.792187 0 0 0.773438 0 1.72969V22.2656C0 23.2219 0.792187 24 1.77187 24H22.2234C23.2031 24 24 23.2219 24 22.2703V1.72969C24 0.773438 23.2031 0 22.2234 0ZM7.12031 20.4516H3.55781V8.99531H7.12031V20.4516ZM5.33906 7.43438C4.19531 7.43438 3.27188 6.51094 3.27188 5.37187C3.27188 4.23281 4.19531 3.30937 5.33906 3.30937C6.47813 3.30937 7.40156 4.23281 7.40156 5.37187C7.40156 6.50625 6.47813 7.43438 5.33906 7.43438ZM20.4516 20.4516H16.8937V14.8828C16.8937 13.5562 16.8703 11.8453 15.0422 11.8453C13.1906 11.8453 12.9094 13.2937 12.9094 14.7891V20.4516H9.35625V8.99531H12.7687V10.5609H12.8156C13.2891 9.66094 14.4516 8.70938 16.1813 8.70938C19.7859 8.70938 20.4516 11.0813 20.4516 14.1656V20.4516Z"
           fill={fill}
         />
@@ -57,9 +62,14 @@ const LinkedIn: FC<IndividualIconProps> = ({ size, fill }) => {
   );
 };
 
-const Location: FC<IndividualIconProps> = ({ size, fill = '#6b7280' }) => {
+const Location: FC<IndividualIconProps> = ({
+  size,
+  fill = '#6b7280',
+  className,
+}) => {
   return (
     <svg
+      className={className}
       width={size}
       height={size}
       viewBox="0 0 24 24"
@@ -67,6 +77,7 @@ const Location: FC<IndividualIconProps> = ({ size, fill = '#6b7280' }) => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
+        className={className}
         d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z"
         stroke={fill}
         strokeWidth="2"
@@ -74,6 +85,7 @@ const Location: FC<IndividualIconProps> = ({ size, fill = '#6b7280' }) => {
         strokeLinejoin="round"
       />
       <path
+        className={className}
         d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
         stroke={fill}
         strokeWidth="2"
@@ -153,8 +165,13 @@ const ArrowTopRight: FC<IndividualIconProps> = ({ size, fill, className }) => (
   </svg>
 );
 
-const ArrowLeftCircle: FC<IndividualIconProps> = ({ size, fill }) => (
+const ArrowLeftCircle: FC<IndividualIconProps> = ({
+  size,
+  fill,
+  className,
+}) => (
   <svg
+    className={className}
     width={size}
     height={size}
     viewBox="0 0 32 32"
@@ -162,6 +179,7 @@ const ArrowLeftCircle: FC<IndividualIconProps> = ({ size, fill }) => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
+      className={className}
       d="M16 10.6667L10.6667 16M10.6667 16L16 21.3334M10.6667 16H21.3333M29.3333 16C29.3333 23.3638 23.3638 29.3334 16 29.3334C8.63619 29.3334 2.66666 23.3638 2.66666 16C2.66666 8.63622 8.63619 2.66669 16 2.66669C23.3638 2.66669 29.3333 8.63622 29.3333 16Z"
       stroke="#D9D9D9"
       strokeWidth="2"
@@ -171,7 +189,15 @@ const ArrowLeftCircle: FC<IndividualIconProps> = ({ size, fill }) => (
   </svg>
 );
 
-const Corellium: FC<IndividualIconProps> = ({ size, fill, className }) => {
+const Corellium: FC<IndividualIconProps> = ({
+  size,
+  fill,
+  className,
+  theme,
+}) => {
+  const customBgFill = theme === 'light' ? neutral[900] : neutral[200];
+  const customLogoFill = theme === 'light' ? neutral[200] : neutral[900];
+
   return (
     <svg
       className={className}
@@ -181,30 +207,42 @@ const Corellium: FC<IndividualIconProps> = ({ size, fill, className }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="12" cy="12" r="12" fill="#D9D9D9" />
+      <circle
+        className={className}
+        cx="12"
+        cy="12"
+        r="12"
+        fill={customBgFill}
+      />
       <path
+        className={className}
         fillRule="evenodd"
         clipRule="evenodd"
         d="M11.1309 22.1642C11.337 22.1652 11.5393 22.1088 11.7151 22.0015L16.9035 18.8768C17.2374 18.6759 17.5137 18.3925 17.7058 18.0538C17.8979 17.7152 17.9992 17.3328 18 16.9437V5.53527C18.0009 5.40471 17.9758 5.27529 17.9262 5.15446C17.8767 5.03363 17.8037 4.92379 17.7114 4.83127C17.6191 4.73876 17.5093 4.66541 17.3885 4.61545C17.2676 4.56549 17.138 4.53991 17.0072 4.54019C16.8293 4.54299 16.6557 4.59491 16.5055 4.6902L13.9802 6.20287C14.4808 6.75884 14.7588 7.4793 14.7612 8.22682V16.9754C14.7629 17.3101 14.6752 17.6392 14.5072 17.9289C14.3391 18.2186 14.0968 18.4583 13.8052 18.6235C13.5135 18.7888 13.183 18.8735 12.8477 18.869C12.5124 18.8645 12.1843 18.7709 11.8972 18.5979L9.99201 17.455V21.0297C9.99145 21.179 10.0205 21.3269 10.0776 21.465C10.1347 21.603 10.2186 21.7284 10.3245 21.8339C10.4304 21.9394 10.5562 22.0229 10.6945 22.0795C10.833 22.1362 10.9813 22.165 11.1309 22.1642V22.1642Z"
-        fill="#080C14"
+        fill={customLogoFill}
       />
       <path
+        className={className}
         fillRule="evenodd"
         clipRule="evenodd"
         d="M10.7036 7.28451L12.6342 6.12465L7.71042 3.16268C7.53565 3.05649 7.33503 3.00022 7.1304 3C6.98169 3.00028 6.83448 3.02979 6.69718 3.08685C6.55989 3.1439 6.43521 3.22739 6.33022 3.33255C6.22526 3.4377 6.14207 3.56245 6.08542 3.6997C6.02876 3.83693 5.99974 3.98397 6.00002 4.1324V12.881C5.99831 13.2729 6.09843 13.6586 6.29062 14.0003C6.48278 14.3421 6.76048 14.6283 7.09652 14.831L9.23876 16.1197V9.87677C9.23962 9.35556 9.37482 8.84336 9.63137 8.38937C9.88791 7.93538 10.2572 7.55491 10.7036 7.28451V7.28451Z"
-        fill="#080C14"
+        fill={customLogoFill}
       />
       <path
+        className={className}
         fillRule="evenodd"
         clipRule="evenodd"
         d="M10.0006 9.87685V16.5698L12.291 17.9473C12.4652 18.0532 12.665 18.1094 12.8689 18.1099C13.0179 18.1097 13.1654 18.0801 13.303 18.0229C13.4405 17.9658 13.5655 17.8821 13.6706 17.7768C13.7758 17.6714 13.8591 17.5464 13.9159 17.4089C13.9727 17.2715 14.0017 17.1241 14.0014 16.9754V8.22682C14.0009 7.92408 13.9396 7.62449 13.821 7.34583C13.7025 7.06712 13.5292 6.81499 13.3113 6.60429L11.0971 7.93527C10.762 8.13695 10.4849 8.42175 10.2928 8.76196C10.1006 9.1022 9.99998 9.48627 10.0006 9.87685Z"
-        fill="#080C14"
+        fill={customLogoFill}
       />
     </svg>
   );
 };
 
-const Pay: FC<IndividualIconProps> = ({ size, fill, className }) => {
+const Pay: FC<IndividualIconProps> = ({ size, fill, className, theme }) => {
+  const customBgFill = theme === 'light' ? neutral[900] : neutral[200];
+  const customLogoFill = theme === 'light' ? neutral[200] : neutral[900];
+
   return (
     <svg
       className={className}
@@ -214,22 +252,28 @@ const Pay: FC<IndividualIconProps> = ({ size, fill, className }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="12" cy="12" r="12" fill="#D9D9D9" />
+      <circle cx="12" cy="12" r="12" fill={customBgFill} />
       <path
         d="M15.1023 4.82703H8.45784C8.0677 4.82703 8.17336 5.24082 8.27496 5.44772C8.55943 6.00635 9.18933 7.22292 9.43317 7.62017C9.72577 7.96776 10.2459 8.05466 10.4695 8.05466C10.5711 8.07534 11.396 8.11672 13.8831 8.11672C15.7728 9.17191 14.6349 10.5788 13.8831 11.034C13.05 11.0133 11.2132 10.9843 10.5304 11.034C9.84768 11.0837 9.47381 11.3857 9.37221 11.5306C9.08774 12.0892 8.42126 13.3554 8.03113 13.9513C7.64099 14.5472 7.90921 14.7789 8.09209 14.8203H12.542C13.3711 14.8699 14.1066 14.6341 14.3708 14.5099C15.529 14.1375 17.7479 13.0575 18.3331 11.4685C19.0646 9.48226 19.1255 8.79949 18.5769 7.18568C18.0889 5.75008 16.1386 4.99255 15.1023 4.82703Z"
-        fill="#171717"
-        stroke="#171717"
+        fill={customLogoFill}
       />
       <path
         d="M10.2412 16.5374H9.44006C8.6856 16.5374 7.58589 16.3744 7.35573 17.0929C7.05909 17.7925 6.40649 19.3028 6.16918 19.7472C5.93188 20.1917 6.30761 20.3851 6.52515 20.4262H10.0848C10.4645 20.4262 10.5594 20.1793 10.5594 20.0559L10.9655 17.3798C11.0327 16.9365 10.6896 16.5374 10.2412 16.5374Z"
-        fill="#171717"
-        stroke="#171717"
+        fill={customLogoFill}
       />
     </svg>
   );
 };
 
-const Leadchat: FC<IndividualIconProps> = ({ size, fill, className }) => {
+const Leadchat: FC<IndividualIconProps> = ({
+  size,
+  fill,
+  className,
+  theme,
+}) => {
+  const customBgFill = theme === 'light' ? neutral[900] : neutral[200];
+  const customLogoFill = theme === 'light' ? neutral[200] : neutral[900];
+
   return (
     <svg
       className={className}
@@ -239,20 +283,23 @@ const Leadchat: FC<IndividualIconProps> = ({ size, fill, className }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="12" cy="12" r="12" fill="#D9D9D9" />
+      <circle cx="12" cy="12" r="12" fill={customBgFill} />
       <path
         d="M17.2208 5.15916L5.31471 6.86237C3.8437 7.0728 3.19511 8.08552 3.05469 8.56558V14.6906L5.31471 12.6926H8.86852L11.8 10.3998L15.1082 10.711L17.7449 7.25542C18.1543 7.10256 19.1467 6.70515 19.8411 6.3383C19.1991 5.23777 17.8267 5.09365 17.2208 5.15916Z"
-        fill="#171717"
+        fill={customLogoFill}
       />
       <path
         d="M20.0547 7.82299L18.6081 8.45808L18.594 16.3614H17.8389L17.7895 9.53773L15.6796 12.1416V16.3614H14.8893V12.1416L12.6876 11.9158V16.3614H11.8903V12.1416L9.87914 13.7293V16.3614H9.10292V14.1104H6.66135V16.3614H5.8569V14.1104C5.30884 14.5926 4.09276 15.6741 3.61292 16.1427C4.0595 16.6507 4.84807 16.8483 5.18653 16.8836L8.38315 17.2153L12.3419 20.673L11.862 17.6528C13.2145 17.8057 16.3034 18.127 17.8389 18.1891C19.2446 18.0875 19.8736 16.933 20.0123 16.3685L20.0547 7.82299Z"
-        fill="#171717"
+        fill={customLogoFill}
       />
     </svg>
   );
 };
 
-const Backifi: FC<IndividualIconProps> = ({ size, fill, className }) => {
+const Backifi: FC<IndividualIconProps> = ({ size, fill, className, theme }) => {
+  const customBgFill = theme === 'light' ? neutral[900] : neutral[200];
+  const customLogoFill = theme === 'light' ? neutral[200] : neutral[900];
+
   return (
     <svg
       className={className}
@@ -262,10 +309,10 @@ const Backifi: FC<IndividualIconProps> = ({ size, fill, className }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="12" cy="12" r="12" fill="#D9D9D9" />
+      <circle cx="12" cy="12" r="12" fill={customBgFill} />
       <path
         d="M9.63611 5.08814C8.17441 5.58542 6.97878 7.50228 6.56368 8.39855C6.37367 8.41838 5.79467 8.54495 4.99878 8.89263C4.20289 9.24031 3.60597 9.93811 3.40699 10.2436C3.26911 10.4146 2.92632 10.9525 2.65822 11.7359C2.38071 12.7255 2.54827 13.3119 2.56921 13.6261C2.59016 13.9403 2.76818 14.4796 2.86243 14.7571C2.95668 15.0346 3.14519 15.3435 3.4803 15.7991C3.81541 16.2546 4.17147 16.5636 4.90976 17.0034C5.64806 17.4432 6.58009 17.5741 6.95186 17.5637C7.32362 17.5532 7.66397 17.5427 8.62218 17.2443C9.38875 17.0055 10.0621 16.4362 10.303 16.1813L12.2456 14.3016L12.277 15.6891C12.3346 15.8619 12.5472 16.1908 12.9368 16.1237C13.3263 16.0567 13.4935 15.8061 13.5284 15.6891V13.2543C13.5337 12.9122 13.541 12.1987 13.5284 12.0814C13.5159 11.9641 13.3975 11.9278 13.3399 11.9244H9.99405C9.78286 11.9366 9.36048 12.093 9.36048 12.6208C9.41912 13.1444 9.8073 13.2788 9.99405 13.2805H10.8947C11.1963 13.2386 11.146 13.3678 11.0832 13.4376C10.7411 13.8006 9.94169 14.6304 9.48091 15.0451C8.90494 15.5635 8.38656 15.82 7.88913 16.04C6.9152 16.3332 5.88368 16.0871 5.2344 15.5321C4.58512 14.977 4.47516 14.7414 4.15053 14.1602C3.79447 13.6282 3.86254 12.818 3.94108 12.4794C3.97599 12.1286 4.22278 11.274 4.93071 10.6624C5.63863 10.0509 6.41749 9.83712 6.71843 9.8067H7.30638C7.3552 9.8339 7.49856 9.87477 7.6814 9.82066C7.80887 8.95938 8.15654 8.32204 8.31444 8.11103C8.47521 7.86413 8.92078 7.2687 9.41687 6.86218C9.91296 6.45566 10.7116 6.20187 11.049 6.12579C11.2313 6.05976 11.8569 5.96301 12.9007 6.10426C14.2055 6.28082 15.0065 7.31005 15.1616 7.44785C15.4759 7.71915 15.6353 8.01198 15.9152 8.46415C16.1391 8.82589 16.2575 9.54162 16.2888 9.85426C16.2826 10.1424 16.274 10.743 16.2888 10.8406C16.3035 10.9381 16.3639 10.9501 16.3922 10.944C16.6286 10.8664 17.2426 10.7194 17.807 10.7519C18.5199 10.9329 18.3389 10.8701 18.9558 11.1841C19.5801 11.6495 19.7722 12.1704 19.9089 12.4327C20.0456 12.695 20.1712 13.4153 20.0456 13.9324C19.92 14.4496 19.6946 14.9705 19.1295 15.4655C18.6773 15.8614 18.025 16.0516 17.7553 16.0971L15.3283 16.1378C15.1498 16.1599 14.7853 16.3239 14.7558 16.8027C14.7262 17.2814 15.1252 17.4873 15.3283 17.5304L17.8439 17.5082C17.972 17.5045 18.2998 17.4728 18.5864 17.3752C19.159 17.1758 19.3585 17.0539 19.7427 16.8101C20.1268 16.5663 20.5793 16.1542 21.0655 15.2958C21.4197 14.4316 21.5 14.0208 21.5 13.2699C21.4481 12.5757 21.3678 12.1365 20.8814 11.2723C20.2911 10.3939 20.0489 10.286 19.5873 9.94895C19.0803 9.64307 18.644 9.4819 18.2084 9.41098C17.8072 9.39882 17.663 9.19653 17.641 9.0969C17.6241 9.02767 17.5629 8.79108 17.4532 8.39855C17.0388 7.03755 15.6449 5.65323 14.4205 5.08814C13.1962 4.52305 11.4632 4.46654 9.63611 5.08814Z"
-        fill="#171717"
+        fill={customLogoFill}
       />
     </svg>
   );
@@ -1346,13 +1393,9 @@ export type StackIconNames =
   | 'docker'
   | 'typescript';
 
-export type CompanyIconNames =
-  | 'github'
-  | 'linkedin'
-  | 'corellium'
-  | 'pay'
-  | 'leadchat'
-  | 'backifi';
+export type CompanyIconNames = 'corellium' | 'pay' | 'leadchat' | 'backifi';
+
+export type SocialIconsNames = 'github' | 'linkedin';
 
 export type EducationIconNames = 'ga' | 'usyd' | 'aftrs' | 'sfs';
 
@@ -1367,13 +1410,16 @@ export type IconNames =
   | StackIconNames
   | CompanyIconNames
   | UtilityIconsNames
-  | EducationIconNames;
+  | EducationIconNames
+  | SocialIconsNames;
 
 type IconsProps = {
   name: IconNames;
   size?: number;
   className?: string;
   fill?: string;
+  onClick?: () => void;
+  theme?: string;
 };
 
 type IconsMap = {
@@ -1417,7 +1463,8 @@ export const Icons: FC<IconsProps> = ({
   name,
   size = '24',
   className,
-  fill = '#171717',
+  fill = neutral[900],
+  theme = 'dark',
 }) => {
   const Icon = iconsMap[name];
 
@@ -1425,7 +1472,7 @@ export const Icons: FC<IconsProps> = ({
     <Icon
       size={size?.toString()}
       className={className}
-      theme="dark"
+      theme={theme}
       fill={fill}
     />
   );

@@ -2,6 +2,7 @@ import type { ImageProps } from 'next/image';
 import type { FC } from 'react';
 import Image from 'next/image';
 import { neutral } from 'tailwindcss/colors';
+import { useTheme } from 'next-themes';
 import { Icons } from './atoms/Icons';
 import type { IconNames } from './atoms/Icons';
 import { ExternalLink } from './atoms/ExternalLink';
@@ -35,20 +36,24 @@ export const Header: FC<HeaderProps> = ({
   <div className="mb-24 sm:mb-32">
     {image && (
       <div className="mb-4">
-        <Image className=" rounded-full" {...image} alt={image.alt} />
+        <Image className="rounded-full" {...image} alt={image.alt} />
       </div>
     )}
-    <h1 className="mb-1 text-4xl font-bold text-white">{name}</h1>
-    <h3 className="mb-6 text-neutral-200">
+    <h1 className="mb-1 text-4xl font-bold text-black dark:text-white">
+      {name}
+    </h1>
+    <h3 className="mb-6 text-neutral-800 dark:text-neutral-200">
       {title.text} <span className="font-semibold">{title.company}</span>
     </h3>
-    <p className="mb-6 max-w-xl text-neutral-400">{description}</p>
+    <p className="mb-6 max-w-xl text-neutral-700 dark:text-neutral-400">
+      {description}
+    </p>
     <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
       <div className="flex items-center gap-1">
         <div className="animate-pulse">
-          <Icons name="location" size={16} fill={neutral[500]} />
+          <Icons name="location" size={16} className="stroke-neutral-500" />
         </div>
-        <p className=" text-sm text-neutral-500">Currently in {location}</p>
+        <p className="text-sm text-neutral-500">Currently in {location}</p>
       </div>
       <div className="flex gap-3">
         {socialLinks.map((socialLink, index) => (
@@ -57,7 +62,11 @@ export const Header: FC<HeaderProps> = ({
             key={index}
             href={socialLink.url}
           >
-            <Icons name={socialLink.iconName} size={24} fill={neutral[600]} />
+            <Icons
+              name={socialLink.iconName}
+              size={24}
+              className="fill-neutral-500 dark:fill-neutral-600"
+            />
           </ExternalLink>
         ))}
       </div>
