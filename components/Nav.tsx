@@ -75,7 +75,11 @@ export const Nav: FC<NavProps> = ({ navLinks }) => {
             <Link key={index} href={link.href} passHref>
               <CustomLink
                 label={link.label}
-                className={router.pathname === link.href ? 'text-shadow' : ''}
+                className={
+                  router.pathname === link.href
+                    ? 'text-shadow dark:text-shadow-dark'
+                    : ''
+                }
               />
             </Link>
           );

@@ -15,7 +15,7 @@ module.exports = {
       xlg: pixelToRem(1280),
     },
     textShadow: {
-      default: '0 0 0.5px black, 0 0 0.8px black',
+      default: '0 0 0.8px #404040, 0 0 0.8px #404040',
     },
     extend: {
       fontSize: {
@@ -24,6 +24,9 @@ module.exports = {
       scale: {
         101: '1.01',
         102: '1.02',
+      },
+      textShadow: {
+        dark: '0 0 0.8px #a3a3a3, 0 0 0.8px #a3a3a3',
       },
     },
   },
