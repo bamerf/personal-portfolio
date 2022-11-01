@@ -16,7 +16,7 @@ export const ProjectSection: FC<ProjectSectionProps> = ({
   link,
 }) => {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-6">
       <h2 className="text-3xl font-semibold text-neutral-800 dark:text-neutral-200">
         {title}
       </h2>

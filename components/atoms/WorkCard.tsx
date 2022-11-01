@@ -37,7 +37,7 @@ export const WorkCard: FC<WorkCardProps> = ({
             <Icons
               key={iconName + index}
               name={iconName}
-              fill={theme === 'dark' ? neutral[900] : neutral[800]}
+              fill={theme === 'light' ? neutral[800] : neutral[900]}
             />
           ))}
         </div>

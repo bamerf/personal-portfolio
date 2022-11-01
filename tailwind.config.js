@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 const pixelToRem = (px) => `${px / 16}rem`;
 
 /** @type {import('tailwindcss').Config} */
@@ -18,6 +20,9 @@ module.exports = {
       default: '0 0 0.8px #404040, 0 0 0.8px #404040',
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+      },
       fontSize: {
         fluid: 'clamp(1.5rem, 3vw + 1.45rem, 2.75rem)',
       },
