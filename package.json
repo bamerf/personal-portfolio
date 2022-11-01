@@ -8,8 +8,6 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "@bamerf/linter": "git+https://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:x-oauth-basic@github.com/bamerf/linter.git"
-  ,
   "dependencies": {
     "clsx": "^1.2.1",
     "next": "12.3.1",
