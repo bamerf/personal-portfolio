@@ -6,9 +6,7 @@ import { Container } from 'components/atoms/Container';
 import { Footer } from 'components/Footer';
 import { navData } from 'data';
 
-// TODO add next 13 and new font system
 // TODO responsive typography for headings
-// TODO add font
 // TODO organise icons
 // TODO create hamburger menu
 // TODO add color theme creator
