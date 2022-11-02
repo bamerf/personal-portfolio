@@ -36,7 +36,7 @@ export const Header: FC<HeaderProps> = ({
   <div className="mb-24 sm:mb-32">
     {image && (
       <div className="mb-4">
-        <Image className="rounded-full" {...image} alt={image.alt} />
+        <Image className="rounded-full" {...image} alt={image.alt} placeholder='blur'/>
       </div>
     )}
     <h1 className="mb-1 text-4xl font-bold text-black dark:text-white">

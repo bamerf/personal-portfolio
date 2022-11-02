@@ -36,6 +36,7 @@ export const ProjectSection: FC<ProjectSectionProps> = ({
                 width={image.width}
                 height={image.height}
                 alt={image.alt}
+                placeholder="blur"
               />
             </div>
           ))}

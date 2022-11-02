@@ -62,6 +62,7 @@ const Corellium: FC<CorelliumPageProps> = ({ data }) => {
               width={data.mainImage.width}
               height={data.mainImage.height}
               alt={data.mainImage.alt}
+              placeholder="blur"
             />
           </div>
         </div>
