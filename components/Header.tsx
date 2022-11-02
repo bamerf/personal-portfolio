@@ -1,11 +1,9 @@
-import type { ImageProps } from 'next/image';
-import type { FC } from 'react';
 import Image from 'next/image';
-import { neutral } from 'tailwindcss/colors';
-import { useTheme } from 'next-themes';
 import { Icons } from './atoms/Icons';
 import type { IconNames } from './atoms/Icons';
 import { ExternalLink } from './atoms/ExternalLink';
+import ProfileImage from 'public/images/profile.jpg';
+import { headerData } from 'data';
 
 type SocialLink = {
   name: string;
@@ -20,43 +18,43 @@ export type HeaderProps = {
     company: string;
   };
   description: string;
-  image: ImageProps;
   socialLinks: SocialLink[];
   location?: string;
 };
 
-export const Header: FC<HeaderProps> = ({
-  name,
-  title,
-  description,
-  image,
-  socialLinks,
-  location,
-}) => (
+export const Header = () => (
   <div className="mb-24 sm:mb-32">
-    {image && (
-      <div className="mb-4">
-        <Image className="rounded-full" {...image} alt={image.alt} placeholder='blur'/>
-      </div>
-    )}
+    <div className="mb-4">
+      <Image
+        className="rounded-full"
+        alt={'profile picture'}
+        width={125}
+        height={125}
+        placeholder="blur"
+        src={ProfileImage}
+      />
+    </div>
     <h1 className="mb-1 text-4xl font-bold text-black dark:text-white">
-      {name}
+      {headerData.name}
     </h1>
     <h3 className="mb-6 text-neutral-800 dark:text-neutral-200">
-      {title.text} <span className="font-semibold">{title.company}</span>
+      {headerData.title.text}{' '}
+      <span className="font-semibold">{headerData.title.company}</span>
     </h3>
     <p className="mb-6 max-w-xl text-neutral-700 dark:text-neutral-400">
-      {description}
+      {headerData.description}
     </p>
     <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
       <div className="flex items-center gap-1">
         <div className="animate-pulse">
           <Icons name="location" size={16} className="stroke-neutral-500" />
         </div>
-        <p className="text-sm text-neutral-500">Currently in {location}</p>
+        <p className="text-sm text-neutral-500">
+          Currently in {headerData.location}
+        </p>
       </div>
       <div className="flex gap-3">
-        {socialLinks.map((socialLink, index) => (
+        {headerData.socialLinks.map((socialLink, index) => (
           <ExternalLink
             className="transition-all duration-100 ease-linear hover:-translate-y-1"
             key={index}

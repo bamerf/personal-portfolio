@@ -1,12 +1,31 @@
 import Image from 'next/image';
-import type { ImageProps } from 'next/image';
+import type { ImageProps, StaticImageData } from 'next/image';
 import type { FC, ReactNode } from 'react';
+import corelliumMagicOne from 'public/images/corellium-magic-1.png';
+import corelliumMagicTwo from 'public/images/corellium-magic-2.png';
+import corelliumWebsiteOne from 'public/images/corellium-website-2.png';
+import corelliumWebsiteTwo from 'public/images/corellium-website-2.png';
+import payUiOne from 'public/images/pay-ui-1.png';
+import payUiTwo from 'public/images/pay-ui-2.png';
+import leadchatOne from 'public/images/leadchat-ui-2.png';
+import leadchatTwo from 'public/images/leadchat-ui-3.png';
 
 type ProjectSectionProps = {
   title: string;
   children: React.ReactNode;
   images?: ImageProps[];
   link?: ReactNode[];
+};
+
+const imagesMap: { [key: string]: StaticImageData } = {
+  corelliumMagicOne: corelliumMagicOne,
+  corelliumMagicTwo: corelliumMagicTwo,
+  corelliumWebsiteOne: corelliumWebsiteOne,
+  corelliumWebsiteTwo: corelliumWebsiteTwo,
+  payUiOne: payUiOne,
+  payUiTwo: payUiTwo,
+  leadchatOne: leadchatOne,
+  leadchatTwo: leadchatTwo,
 };
 
 export const ProjectSection: FC<ProjectSectionProps> = ({
@@ -32,7 +51,7 @@ export const ProjectSection: FC<ProjectSectionProps> = ({
             >
               <Image
                 className="rounded-md"
-                src={image.src}
+                src={imagesMap[image.src as string]}
                 width={image.width}
                 height={image.height}
                 alt={image.alt}

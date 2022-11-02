@@ -47,7 +47,7 @@ export const workData: WorkData[] = [
       'jenkins',
     ],
     mainImage: {
-      src: '/images/corellium-main.png',
+      src: 'corelliumMain',
       width: 2850,
       height: 1388,
       alt: 'corellium platform',
@@ -62,13 +62,13 @@ export const workData: WorkData[] = [
         title: 'UI Library',
         images: [
           {
-            src: '/images/corellium-magic-1.png',
+            src: 'corelliumMagicOne',
             width: 2850,
             height: 1388,
             alt: 'ui library',
           },
           {
-            src: '/images/corellium-magic-2.png',
+            src: 'corelliumMagicTwo',
             width: 2850,
             height: 1388,
             alt: 'design system',
@@ -90,13 +90,13 @@ export const workData: WorkData[] = [
         title: 'Website',
         images: [
           {
-            src: '/images/corellium-website-1.png',
+            src: 'corelliumWebsiteOne',
             width: 2850,
             height: 1388,
             alt: 'corellium website',
           },
           {
-            src: '/images/corellium-website-2.png',
+            src: 'corelliumWebsiteTwo',
             width: 2850,
             height: 1388,
             alt: 'corellium website',
@@ -138,7 +138,7 @@ export const workData: WorkData[] = [
       'Founding member on the engineering team, I helped the first release of the product and was responsible for numerous features and teams.',
     stack: ['typescript', 'react', 'nodejs', 'apollo', 'mongodb'],
     mainImage: {
-      src: '/images/pay-main.png',
+      src: 'payMain',
       width: 1382,
       height: 1320,
       alt: 'pay.com.ay platform',
@@ -154,13 +154,13 @@ export const workData: WorkData[] = [
         title: 'UI Library',
         images: [
           {
-            src: '/images/pay-ui-1.png',
+            src: 'payUiOne',
             width: 2850,
             height: 1388,
             alt: 'ui library',
           },
           {
-            src: '/images/pay-ui-2.png',
+            src: 'payUiTwo',
             width: 2850,
             height: 1388,
             alt: 'ui library',
@@ -202,7 +202,7 @@ export const workData: WorkData[] = [
       'azure',
     ],
     mainImage: {
-      src: '/images/leadchat-ui-1.png',
+      src: 'leadchatMain',
       width: 2850,
       height: 1388,
       alt: 'leadchat platform',
@@ -226,13 +226,13 @@ export const workData: WorkData[] = [
         title: 'UI Library',
         images: [
           {
-            src: '/images/leadchat-ui-2.png',
+            src: 'leadchatOne',
             width: 2850,
             height: 1388,
             alt: 'leadchat ui library',
           },
           {
-            src: '/images/leadchat-ui-3.png',
+            src: 'leadchatTwo',
             width: 2850,
             height: 1388,
             alt: 'leadchat ui library',
@@ -276,7 +276,7 @@ export const workData: WorkData[] = [
       'Co-developer on the initial engineering team, responsible for designing, architecting and building the fastest growing product in the company.',
     stack: ['react', 'nodejs', 'postgres', 'circleci', 'docker', 'aws'],
     mainImage: {
-      src: '/images/backifi-main.png',
+      src: 'backifiMain',
       width: 2850,
       height: 1388,
       alt: 'backifi platform',

@@ -1,6 +1,7 @@
 import type { GetStaticPaths, GetStaticProps } from 'next';
-import type { FC, ReactNode } from 'react';
+import type { FC } from 'react';
 import Image from 'next/image';
+import type { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import { neutral } from 'tailwindcss/colors';
 import clsx from 'clsx';
@@ -10,9 +11,20 @@ import { ProjectSection } from 'components/ProjectSection';
 import { ExternalLink } from 'components/atoms/ExternalLink';
 import type { ProjectLink, WorkData } from 'data/work';
 import { Heading } from 'components/atoms/Heading';
+import corelliumMain from 'public/images/corellium-main.png';
+import payMain from 'public/images/pay-main.png';
+import leadchatMain from 'public/images/leadchat-ui-1.png';
+import backifiMain from 'public/images/backifi-main.png';
 
 type CorelliumPageProps = {
   data: WorkData;
+};
+
+const imagesMap: { [key: string]: StaticImageData } = {
+  corelliumMain: corelliumMain,
+  payMain: payMain,
+  leadchatMain: leadchatMain,
+  backifiMain: backifiMain,
 };
 
 const ProjectLink = ({ text, href, hrefLabel }: ProjectLink) => (
@@ -58,7 +70,7 @@ const Corellium: FC<CorelliumPageProps> = ({ data }) => {
           >
             <Image
               className="rounded-md"
-              src={data.mainImage.src}
+              src={imagesMap[data.mainImage.src as string]}
               width={data.mainImage.width}
               height={data.mainImage.height}
               alt={data.mainImage.alt}
