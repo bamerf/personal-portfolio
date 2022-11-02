@@ -30,7 +30,6 @@ export const Header = () => (
         alt={'profile picture'}
         width={125}
         height={125}
-        placeholder="blur"
         src={ProfileImage}
       />
     </div>
