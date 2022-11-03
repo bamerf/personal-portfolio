@@ -1,9 +1,9 @@
 import Image from 'next/image';
+import ProfileImage from 'public/images/profile.jpg';
+import { headerData } from 'data';
 import { Icons } from './atoms/Icons';
 import type { IconNames } from './atoms/Icons';
 import { ExternalLink } from './atoms/ExternalLink';
-import ProfileImage from 'public/images/profile.jpg';
-import { headerData } from 'data';
 
 type SocialLink = {
   name: string;

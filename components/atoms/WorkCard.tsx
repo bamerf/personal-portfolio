@@ -1,8 +1,8 @@
 import type { FC } from 'react';
 import { useTheme } from 'next-themes';
 import { neutral } from 'tailwindcss/colors';
-import { Icons } from './Icons';
 import type { WorkData } from 'data/work';
+import { Icons } from './Icons';
 
 type WorkCardProps = WorkData;
 
