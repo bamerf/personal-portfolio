@@ -3,7 +3,7 @@ import type { ImageProps, StaticImageData } from 'next/image';
 import type { FC, ReactNode } from 'react';
 import corelliumMagicOne from 'public/images/corellium-magic-1.png';
 import corelliumMagicTwo from 'public/images/corellium-magic-2.png';
-import corelliumWebsiteOne from 'public/images/corellium-website-2.png';
+import corelliumWebsiteOne from 'public/images/corellium-website-1.png';
 import corelliumWebsiteTwo from 'public/images/corellium-website-2.png';
 import payUiOne from 'public/images/pay-ui-1.png';
 import payUiTwo from 'public/images/pay-ui-2.png';

@@ -106,6 +106,7 @@ export const workData: WorkData[] = [
           "As part of this project we re-designed and re-built the company's website using our new UI library.",
           "I personally took charge and delivered this project before it's due date while being able to contribute to our UI library as I was using it.",
           'We used TypeScript and NextJS as the main technologies, used Tailwind to manage styling and responsiveness and we used headless CMS to manage the content.',
+          'Note: The repo for this project has been passed on to an external agency and is broken at the time of writing this.',
         ],
         links: [
           {
