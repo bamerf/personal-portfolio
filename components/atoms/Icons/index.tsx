@@ -341,6 +341,7 @@ const Backifi: FC<IndividualIconProps> = ({ size, fill, className, theme }) => {
 const React: FC<IndividualIconProps> = ({ size, fill, className, theme }) => {
   return (
     <svg
+      className={className}
       width={size}
       height={size}
       viewBox="0 0 24 25"
@@ -384,6 +385,7 @@ const NodeJS: FC<IndividualIconProps> = ({ size, fill, className, theme }) => {
 const NextJS: FC<IndividualIconProps> = ({ size, fill, className, theme }) => {
   return (
     <svg
+      className={className}
       width={size}
       height={size}
       viewBox="0 0 24 24"
@@ -432,6 +434,7 @@ const NextJS: FC<IndividualIconProps> = ({ size, fill, className, theme }) => {
 const Vercel: FC<IndividualIconProps> = ({ size, fill, className, theme }) => {
   return (
     <svg
+      className={className}
       width={size}
       height={size}
       viewBox="0 0 24 24"
@@ -449,9 +452,10 @@ const Vercel: FC<IndividualIconProps> = ({ size, fill, className, theme }) => {
   );
 };
 
-const Redux: FC<IndividualIconProps> = ({ size, fill }) => {
+const Redux: FC<IndividualIconProps> = ({ size, fill, className }) => {
   return (
     <svg
+      className={className}
       width={size}
       height={size}
       viewBox="0 0 24 24"
@@ -467,9 +471,10 @@ const Redux: FC<IndividualIconProps> = ({ size, fill }) => {
   );
 };
 
-const AWS: FC<IndividualIconProps> = ({ size, fill }) => {
+const AWS: FC<IndividualIconProps> = ({ size, fill, className }) => {
   return (
     <svg
+      className={className}
       width={size}
       height={size}
       viewBox="0 0 24 24"
@@ -497,9 +502,10 @@ const AWS: FC<IndividualIconProps> = ({ size, fill }) => {
   );
 };
 
-const Tailwind: FC<IndividualIconProps> = ({ size, fill }) => {
+const Tailwind: FC<IndividualIconProps> = ({ size, fill, className }) => {
   return (
     <svg
+      className={className}
       width={size}
       height={size}
       viewBox="0 0 24 24"
@@ -527,6 +533,7 @@ const Postgres: FC<IndividualIconProps> = ({
 }) => {
   return (
     <svg
+      className={className}
       width={size}
       height={size}
       viewBox="0 0 24 24"
@@ -554,9 +561,10 @@ const Postgres: FC<IndividualIconProps> = ({
   );
 };
 
-const CircleCI: FC<IndividualIconProps> = ({ size, fill }) => {
+const CircleCI: FC<IndividualIconProps> = ({ size, fill, className }) => {
   return (
     <svg
+      className={className}
       width={size}
       height={size}
       viewBox="0 0 24 24"
@@ -622,9 +630,10 @@ const Apollo: FC<IndividualIconProps> = ({ size, fill, className }) => {
   );
 };
 
-const Azure: FC<IndividualIconProps> = ({ size, fill }) => {
+const Azure: FC<IndividualIconProps> = ({ size, fill, className }) => {
   return (
     <svg
+      className={className}
       width={size}
       height={size}
       viewBox="0 0 24 24"
@@ -640,9 +649,10 @@ const Azure: FC<IndividualIconProps> = ({ size, fill }) => {
   );
 };
 
-const Jenkins: FC<IndividualIconProps> = ({ size, fill }) => {
+const Jenkins: FC<IndividualIconProps> = ({ size, fill, className }) => {
   return (
     <svg
+      className={className}
       width={size}
       height={size}
       viewBox="0 0 24 24"
@@ -990,6 +1000,7 @@ const Jenkins: FC<IndividualIconProps> = ({ size, fill }) => {
 const Docker: FC<IndividualIconProps> = ({ size, fill, className }) => {
   return (
     <svg
+      className={className}
       width={size}
       height={size}
       viewBox="0 0 24 24"

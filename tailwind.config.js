@@ -33,6 +33,18 @@ module.exports = {
       textShadow: {
         dark: '0 0 0.8px #a3a3a3, 0 0 0.8px #a3a3a3',
       },
+      transitionDelay: {
+        100: '100ms',
+        200: '200ms',
+        300: '300ms',
+        400: '400ms',
+        500: '500ms',
+        600: '600ms',
+        700: '700ms',
+        800: '800ms',
+        900: '900ms',
+        1000: '1000ms',
+      },
     },
   },
   plugins: [
