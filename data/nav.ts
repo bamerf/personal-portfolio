@@ -9,6 +9,6 @@ export const navData = [
   },
   {
     label: 'Resume',
-    href: '/resume.pdf',
+    href: '/bamdad-resume-2022.pdf',
   },
 ];
