@@ -57,12 +57,6 @@ export const WorkSection = () => {
                   key={index}
                   {...work}
                   isInView={inViewIndexes?.includes(index)}
-                  className={clsx('transition-opacity duration-300', {
-                    'opacity-0': !inViewIndexes?.includes(index),
-                    'opacity-1': inViewIndexes?.includes(index),
-                    'blur-sm': !inViewIndexes?.includes(index),
-                    'blur-none': inViewIndexes?.includes(index),
-                  })}
                 />
               </a>
             </Link>

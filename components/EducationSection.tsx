@@ -50,7 +50,7 @@ export const EducationSection: FC<EducationSectionProps> = ({ className }) => {
           >
             <EducationCard
               {...education}
-              className={clsx('transition-opacity duration-300', {
+              className={clsx('duration-400 transition-opacity', {
                 'opacity-0': !inViewIndexes?.includes(index),
                 'opacity-1': inViewIndexes?.includes(index),
                 'blur-md': !inViewIndexes?.includes(index),
