@@ -20,5 +20,5 @@ export const headerData: HeaderProps = {
       iconName: 'github',
     },
   ],
-  location: 'Grenoble, France',
+  location: 'Sydney, Australia',
 };

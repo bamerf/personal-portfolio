@@ -116,6 +116,20 @@ export const workData: WorkData[] = [
           },
         ],
       },
+      {
+        title: 'Webplayer',
+        description: [
+          'I successfully implemented a groundbreaking feature that enabled users to effortlessly embed their Corellium devices into various platforms of their choice, including websites and applications.',
+          'This feature has opened new possibilities in industries such as education and research, allowing users to leverage the full potential of Corellium devices in their respective domains',
+        ],
+        links: [
+          {
+            text: 'View',
+            href: 'https://support.corellium.com/webplayer',
+            hrefLabel: 'Corellium Webplayer',
+          },
+        ],
+      },
     ],
     more: {
       title: 'More...',
