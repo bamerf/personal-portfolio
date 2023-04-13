@@ -1,10 +1,16 @@
 import { NextPage } from 'next';
+import { NextSeo } from 'next-seo';
 import { EducationSection } from 'components/EducationSection';
 import { ExternalLink } from 'components/atoms/ExternalLink';
+import { location } from '../../data/constants';
 
 const About: NextPage = () => {
   return (
     <>
+      <NextSeo
+        title="Bamdad Erfanian | About"
+        description={`About Bamdad Erfanian, software engineer based in ${location}.`}
+      />
       <h1 className="mb-16 text-4xl font-bold text-black dark:text-white">
         About
       </h1>

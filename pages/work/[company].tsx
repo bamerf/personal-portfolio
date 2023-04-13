@@ -3,6 +3,7 @@ import type { FC } from 'react';
 import Image from 'next/image';
 import type { StaticImageData } from 'next/image';
 import Link from 'next/link';
+import { NextSeo } from 'next-seo';
 import { neutral } from 'tailwindcss/colors';
 import clsx from 'clsx';
 import { paths, workData } from 'data';
@@ -15,6 +16,7 @@ import corelliumMain from 'public/images/corellium-main.png';
 import payMain from 'public/images/pay-main.png';
 import leadchatMain from 'public/images/leadchat-ui-1.png';
 import backifiMain from 'public/images/backifi-main.png';
+import { location } from 'data/constants';
 
 type CorelliumPageProps = {
   data: WorkData;
@@ -39,6 +41,10 @@ const ProjectLink = ({ text, href, hrefLabel }: ProjectLink) => (
 const Corellium: FC<CorelliumPageProps> = ({ data }) => {
   return (
     <div className="mb-16">
+      <NextSeo
+        title={`Bamdad Erfanian | Work | ${data.name}`}
+        description={`Work experience of Bamdad Erfanian, a software engineer based in ${location}`}
+      />
       <div className="mb-16 flex flex-col gap-8 sm:gap-16">
         <Link href="/#work" passHref>
           <a className="w-fit">

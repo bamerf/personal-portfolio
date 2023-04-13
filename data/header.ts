@@ -1,4 +1,5 @@
 import type { HeaderProps } from 'components/Header';
+import { location } from '../data/constants';
 
 export const headerData: HeaderProps = {
   name: 'Bamdad Erfanian',
@@ -20,5 +21,5 @@ export const headerData: HeaderProps = {
       iconName: 'github',
     },
   ],
-  location: 'Sydney, Australia',
+  location,
 };
