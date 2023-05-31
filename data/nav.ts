@@ -9,6 +9,6 @@ export const navData = [
   },
   {
     label: 'Resume',
-    href: '/bamdad-resume-2022.pdf',
+    href: '/bam-erfanian-resume.pdf',
   },
 ];
