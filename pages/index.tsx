@@ -3,6 +3,7 @@ import { NextSeo } from 'next-seo';
 import { Header } from 'components/Header';
 import { EducationSection } from 'components/EducationSection';
 import { WorkSection } from 'components/WorkSection';
+import { ProjectsSection } from 'components/ProjectsSection';
 import { location } from 'data/constants';
 
 const Home: NextPage = () => {
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
       />
       <Header />
       <WorkSection />
+      <ProjectsSection />
       <EducationSection />
     </div>
   );

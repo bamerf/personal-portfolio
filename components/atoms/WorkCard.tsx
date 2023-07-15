@@ -10,7 +10,7 @@ type WorkCardProps = WorkData & {
   isInView?: boolean;
 };
 
-const delayMap: { [key: number]: string } = {
+export const delayMap: { [key: number]: string } = {
   0: 'delay-100',
   1: 'delay-200',
   2: 'delay-300',

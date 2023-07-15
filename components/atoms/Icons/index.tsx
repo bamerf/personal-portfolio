@@ -1422,7 +1422,9 @@ export type StackIconNames =
   | 'azure'
   | 'jenkins'
   | 'docker'
-  | 'typescript';
+  | 'typescript'
+  | 'rollup'
+  | 'svelte';
 
 export type CompanyIconNames = 'corellium' | 'pay' | 'leadchat' | 'backifi';
 
@@ -1490,6 +1492,8 @@ const iconsMap: IconsMap = {
   jenkins: Jenkins,
   docker: Docker,
   typescript: TypeScript,
+  rollup: Rollup,
+  svelte: Svelte,
 };
 
 export const Icons: FC<IconsProps> = ({

@@ -1,23 +1,23 @@
-import { useState } from 'react';
-import Link from 'next/link';
-import { WorkCard } from 'components/atoms/WorkCard';
-import type { WorkData } from 'data/work';
-import { workData } from 'data/work';
+import clsx from 'clsx';
+import { useState, type FC } from 'react';
+import { projectsData } from 'data';
+import { ProjectCard } from 'components/atoms/ProjectCard';
 import { Observer } from 'components/atoms/Observer';
 
-export const WorkSection = () => {
+type EducationSectionProps = {
+  className?: string;
+};
+
+export const ProjectsSection: FC<EducationSectionProps> = ({ className }) => {
   const [inViewIndexes, setInViewIndexes] = useState<number[] | null>(null);
 
   return (
-    <div className="mb-24">
-      <h2
-        id="work"
-        className="mb-6 text-3xl font-semibold text-neutral-800 dark:text-neutral-200"
-      >
-        Work
+    <div className={clsx('mb-8', className)}>
+      <h2 className="mb-6 text-3xl font-semibold text-neutral-800 dark:text-neutral-200">
+        Projects
       </h2>
       <div className="flex flex-col gap-8">
-        {workData.map((work: WorkData, index) => (
+        {projectsData.map((project, index) => (
           <Observer
             key={index}
             onChange={(inview) => {
@@ -46,19 +46,11 @@ export const WorkSection = () => {
               }
             }}
           >
-            <Link
-              className="cursor-pointer"
-              href={`/work/${work.iconName}`}
+            <ProjectCard
               key={index}
-            >
-              <a>
-                <WorkCard
-                  key={index}
-                  {...work}
-                  isInView={inViewIndexes?.includes(index)}
-                />
-              </a>
-            </Link>
+              isInView={inViewIndexes?.includes(index)}
+              {...project}
+            />
           </Observer>
         ))}
       </div>

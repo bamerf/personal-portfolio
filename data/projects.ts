@@ -1,4 +1,13 @@
-export const projectData = [
+import type { StackIconNames } from 'components/atoms/Icons';
+
+export type ProjectsData = {
+  name: string;
+  description: string;
+  href: string;
+  stack: StackIconNames[];
+};
+
+export const projectsData: ProjectsData[] = [
   {
     name: 'React Untitled Icons',
     description: 'A collection of icons based on the Untitled UI design system',
