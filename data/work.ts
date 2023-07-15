@@ -82,7 +82,7 @@ export const workData: WorkData[] = [
           {
             text: 'View',
             href: 'https://magic.corellium.design/',
-            hrefLabel: 'Magic UI Library',
+            hrefLabel: 'Metal UI Library',
           },
         ],
       },

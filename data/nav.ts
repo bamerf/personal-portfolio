@@ -4,9 +4,13 @@ export const navData = [
     href: '/',
   },
   {
-    label: 'About',
-    href: '/about',
+    label: 'Projects',
+    href: '/projects',
   },
+  // {
+  //   label: 'About',
+  //   href: '/about',
+  // },
   {
     label: 'Resume',
     href: '/bam-erfanian-resume.pdf',

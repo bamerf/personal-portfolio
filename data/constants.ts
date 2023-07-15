@@ -1,1 +1,1 @@
-export const location = 'Delray Beach, Florida';
+export const location = 'Florida, United States';
