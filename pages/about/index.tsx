@@ -15,6 +15,7 @@ const About: NextPage = () => {
         About
       </h1>
 
+      {/* eslint-disable-next-line prettier/prettier */}
       <div className="flex flex-col gap-5 mb-24 text-neutral-700 dark:text-neutral-300">
         <p>
           I am currently lending my expertise to{' '}
