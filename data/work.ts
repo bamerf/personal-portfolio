@@ -53,9 +53,9 @@ export const workData: WorkData[] = [
       alt: 'corellium platform',
     },
     intro: [
-      'I joined Corellium to help the Product and Core engineering team take the platform and the codebase from a succesful start-up to an exciting scale-up.',
-      'We were tasked with bringing a new look to our app, marketing website and presence online, as well as clearing years of tech debt and modernizing the codebase.',
-      'Here are some of the projects I had the pleasure worked on.',
+      'I became a part of Corellium with the aim to assist the Product and Core engineering team in transitioning the platform and the codebase from a successful start-up to an exciting scale-up',
+      'Our responsibility was to infuse a fresh aesthetic into our app, marketing website, and online presence, while also addressing years of accumulated technical debt and modernizing the codebase',
+      'Here are some of the projects on which I had the pleasure of working.',
     ],
     projects: [
       {
@@ -75,8 +75,8 @@ export const workData: WorkData[] = [
           },
         ],
         description: [
-          'We designed and built a modern, accessible and responsive design system and UI library in order to bring a fresh look to the platform.',
-          ' We used TypeScript, React, Sotrybook and modern design patterns to create a UI library that could be used across all company products, while making sure it is easy to use and update for the engineers.',
+          'We conceptualized and developed a modern, accessible, and responsive design system along with a UI library to imbue our platform with a fresh aesthetic.',
+          'Utilizing TypeScript, React, Storybook, and modern design patterns, we crafted a UI library that could be implemented across all company products. We ensured its ease of use and upgradability for the engineers.',
         ],
         links: [
           {
@@ -103,10 +103,10 @@ export const workData: WorkData[] = [
           },
         ],
         description: [
-          "As part of this project we re-designed and re-built the company's website using our new UI library.",
-          "I personally took charge and delivered this project before it's due date while being able to contribute to our UI library as I was using it.",
-          'We used TypeScript and NextJS as the main technologies, used Tailwind to manage styling and responsiveness and we used headless CMS to manage the content.',
-          'Note: The repo for this project has been passed on to an external agency and is broken at the time of writing this.',
+          "As a component of this project, we re-imagined and reconstructed the company's website employing our newly-developed UI library.",
+          'I personally undertook and delivered this project while simultaneously contributing to our UI library as I utilized it.',
+          'Our primary technologies were TypeScript and NextJS. We employed Tailwind for managing styling and responsiveness, and we used a headless CMS for content management.',
+          'Please note: The repository for this project has since been transferred to an external agency, and unfortunately, it is currently in a non-functional state at the time of writing this.',
         ],
         links: [
           {
@@ -119,8 +119,8 @@ export const workData: WorkData[] = [
       {
         title: 'Webplayer',
         description: [
-          'I successfully implemented a groundbreaking feature that enabled users to effortlessly embed their Corellium devices into various platforms of their choice, including websites and applications.',
-          'This feature has opened new possibilities in industries such as education and research, allowing users to leverage the full potential of Corellium devices in their respective domains',
+          'I effectively deployed a feature that facilitated users to seamlessly integrate their Corellium devices into various preferred platforms, encompassing websites and applications.',
+          'This feature has unlocked novel possibilities in sectors such as education and research, empowering users to harness the maximum potential of Corellium devices in their respective fields.',
         ],
         links: [
           {
@@ -134,13 +134,14 @@ export const workData: WorkData[] = [
     more: {
       title: 'More...',
       description:
-        "In addition to the projects above, I've worked on many smaller initiatives, projects and features, some of which are listed below",
+        "Apart from the aforementioned projects, I've been involved in numerous smaller ventures, projects, and feature developments, a few of which are enumerated below.",
       projects: [
-        'Completed two years of tech debt',
-        'Converted the codebase from JavaScript to TypeScript',
-        "Added styling modularisation to the app's components",
-        'Refactored and cleaned up thousands of lines of code',
-        'And fixed/completed countless bugs and tickets',
+        "Accomplished the resolution of two years' worth of technical debt",
+        'Transformed the codebase from JavaScript to TypeScript',
+        "Incorporated modular styling to the app's components",
+        'Undertook refactoring and cleanup of thousands of lines of code',
+        "Built an AI chatbot based on the company's knowledge base",
+        'Remedied and addressed innumerable bugs and tickets',
       ],
     },
   },
@@ -159,10 +160,10 @@ export const workData: WorkData[] = [
       alt: 'pay.com.ay platform',
     },
     intro: [
-      'I joined the Pay team with the goal of moving the product from an MVP to a fully fledged payment platform.',
-      'I worked closely with the CTO on all the different parts of the product. I was responsible for the frontend, backend, and the infrastructure alongside the CTO, while also worked on the design of the product.',
-      'Our aim was to create a robust and secure codebase. We used block-chain technology to manage our ledgers and had a code audit process for every user action. We also focused heavily on validation and testing both the frontend and the backend.',
-      'Here are some of the projects I had the pleasure worked on.',
+      'I became a member of the Pay team with an objective to transition the product from a minimum viable product (MVP) to a comprehensive payment platform.',
+      'My collaboration with the CTO extended to all facets of the product, where I held responsibility for frontend, backend, and infrastructure management. Additionally, I also contributed to the product design process.',
+      'Our mission was to construct a strong and secure codebase. We employed blockchain technology for our ledger management and implemented a rigorous code audit process for every user interaction. Our focus significantly leaned towards rigorous validation and testing of both the frontend and the backend components.',
+      'Below are some of the projects I had the opportunity to work on.',
     ],
     projects: [
       {
@@ -182,21 +183,21 @@ export const workData: WorkData[] = [
           },
         ],
         description: [
-          'Having built a design system and UI library before joining company, I took the responsibility of building a new one for Pay.com.au.',
-          'I used TypeScript, React and modern design patterns to create a set that could be used across different products.',
+          'Having previously constructed a design system and UI library prior to joining the company, I embraced the duty of developing a new one for Pay.com.au.',
+          'I leveraged TypeScript, React, and contemporary design patterns to create a versatile set applicable across various products.',
         ],
       },
     ],
     more: {
       title: 'More...',
       description:
-        'In addition to the project above, I worked on many smaller initiatives, projects and features, some of which are listed below.',
+        'In addition to the aforementioned project, I contributed to numerous smaller initiatives, projects, and features, a selection of which are detailed below:',
       projects: [
-        'Directly managed two external teams',
-        'Built the two factor authentication feature',
-        'Implemented the integration with BPAY payment platform',
-        'Worked on implementing robust UI and server side validations',
-        'And was actively involved in the interviewing and the hiring process',
+        'I directly supervised two external teams',
+        'Constructed the two-factor authentication feature',
+        'Facilitated the integration with the BPAY payment platform',
+        'Contributed to the implementation of robust UI and server-side validations',
+        'And participated actively in the interviewing and hiring processes',
       ],
     },
   },
@@ -223,18 +224,18 @@ export const workData: WorkData[] = [
       alt: 'leadchat platform',
     },
     intro: [
-      'Leadchat presented an amazing growth opportunity for me as developer as I was the sole developer on the platform tasked to build many new tools as well as take charge of moving the codebase to more modern technologies and languages.',
-      'I was responsible for the frontend, backend, design and the infrastructure of all the products, and helped turn many business ideas into tools that were used both by clients and employees.',
-      'Here are some of the projects and tools I had the pleasure worked',
+      'Leadchat offered an exceptional growth opportunity for me as a developer, being the sole programmer on the platform, tasked with constructing various new tools and spearheading the transition of the codebase to more contemporary technologies and languages.',
+      'I held responsibility for the frontend, backend, design, and infrastructure across all products, and successfully converted many business concepts into tools utilized by both clients and employees.',
+      'Below are some of the projects and tools I had the opportunity to work on.',
     ],
     projects: [
       {
         title: 'Performance Analysis App',
         description: [
-          'One of the first tasks I was given was to create a tool that would help the business evaluate the performance of the support team and the quality of the support provided to the clients.',
-          'I worked closely with other departments to create a set of performance metrics that could promote healthy competition between the support team and help the business identify areas of improvement.',
-          'Using these metrics I was able to create an app where each memeber could be rated by their manager and the results would be displayed in a leaderboard.',
-          'I was responsible for the design, data modeling, frontend and backend, insfrastructure, CI/CD and hosting.',
+          'One of my initial assignments involved creating a tool to assist the business in assessing the performance of the support team and the quality of the support delivered to clients.',
+          'I collaborated closely with other departments to establish a set of performance metrics aimed at fostering healthy competition within the support team and helping the business pinpoint areas for improvement.',
+          'Leveraging these metrics, I was able to design an application where each team member could be evaluated by their manager, with the results being showcased in a leaderboard.',
+          'I held responsibility for the design, data modeling, frontend and backend, infrastructure, continuous integration/continuous delivery (CI/CD), and hosting.',
         ],
       },
       {
@@ -254,8 +255,8 @@ export const workData: WorkData[] = [
           },
         ],
         description: [
-          'I had the pleasure to design and build my first component library at Leadchat with the aim of unifying the design language of the platform.',
-          'I used Storybook to create a living documentation of the components and styled-components to create a theme that could easily be updated.',
+          "I had the delightful opportunity to design and construct my inaugural component library at Leadchat, with the objective of standardizing the platform's design language.",
+          'I utilized Storybook to create dynamic documentation of the components and styled-components to fashion a theme that could be updated with ease.',
         ],
         links: [
           {
@@ -274,11 +275,11 @@ export const workData: WorkData[] = [
     more: {
       title: 'More...',
       description:
-        'In addition to the projects above, I worked on many smaller initiatives, projects and features, some of which are listed below',
+        'In addition to the projects mentioned above, I was involved in numerous smaller initiatives, projects, and features, some of which are outlined below:',
       projects: [
-        'Created an email system compatible with all browsers and clients.',
-        'Built a number of automated reporting and analysis tools.',
-        'Took responsibility for improving a newly developed platform with a lot of rough edges.',
+        'Developed an email system that is compatible across all browsers and clients',
+        'Constructed several automated reporting and analysis tools',
+        'Assumed responsibility for refining a recently developed platform that had numerous rough edges',
       ],
     },
   },
@@ -297,9 +298,9 @@ export const workData: WorkData[] = [
       alt: 'backifi platform',
     },
     intro: [
-      'At PoweredLocal I was tasked with creating a tool that would be essential to the success of the business. The tool was used as a companion to the services offered by the business and quickly became one of the fastest growing products in the company.',
-      'I planned and co-developed this app from scratch, working closely on all aspects of the product. We were responsible for the design, development, and deployment of the app.',
-      'I personally took charge of integrating with six different storage platforms including Google Drive, Dropbox, and Microsoft OneDrive.',
+      "At PoweredLocal, I was assigned to develop a tool integral to the business's success. This tool served as a complement to the services offered by the business and swiftly became one of the fastest-growing products within the company.",
+      'I strategized and co-developed this application from its inception, closely working on all facets of the product. We held responsibility for the design, development, and deployment of the application.',
+      'I personally undertook the task of integrating the application with six different storage platforms, including Google Drive, Dropbox, and Microsoft OneDrive.',
       {
         text: 'View the',
         href: 'https://www.backifi.com/',

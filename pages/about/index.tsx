@@ -15,46 +15,50 @@ const About: NextPage = () => {
         About
       </h1>
 
-      <div className="mb-24 flex flex-col gap-5 text-neutral-700 dark:text-neutral-300">
+      <div className="flex flex-col gap-5 mb-24 text-neutral-700 dark:text-neutral-300">
         <p>
-          I&apos;m currently working at{' '}
+          I am currently lending my expertise to{' '}
           <ExternalLink
             className="font-semibold underline"
             href="https://www.corellium.com/"
           >
-            Corellium
+            Corellium,
           </ExternalLink>{' '}
-          helping refresh the look of the platform after a successful series A
-          funding. I&apos;ve been enjoying working on many greenfield projects
-          and helping optimise and growing the current platform.
+          embarking on a mission to rejuvenate the platform&apos;s aesthetics
+          following a successful Series A funding round. I find immense pleasure
+          in working on numerous fresh, &apos;greenfield&apos; projects and
+          contributing to the optimization and expansion of our existing
+          platform.
         </p>
         <p>
-          Previously I worked at{' '}
+          Prior to Corellium, I was part of the{' '}
           <ExternalLink
             className="font-semibold underline"
             href="https://pay.com.au/"
           >
             Pay.com.au
           </ExternalLink>{' '}
-          where we used modern technologies like block-chain to create a payment
-          platform for businesses.
+          team, where we harnessed cutting-edge technologies like blockchain to
+          build a business-oriented payment platform.
         </p>
         <p>
-          My work has always been around the JavaScript and TypeScript ecosystem
-          and recently I&apos;ve been focusing more on frontend technologies.
-          After building a few of UI libraries, I&apos;ve come to appreciate the
-          nuanced balance between the technical and the aesthetic.
+          The universe of JavaScript and TypeScript has been my professional
+          playground for years, with a recent pivot towards a deeper focus on
+          frontend technologies. Having crafted several UI libraries, I&apos;ve
+          developed a deep understanding of the delicate equilibrium between
+          technical proficiency and aesthetic appeal.
         </p>
         <p>
-          I enjoy looking at projects from a top down perspective, so I often
-          involve myself with all aspect of the development process, from
-          product vision and platform architecture, all the way down to code
-          optimisation and design patterns.
+          My approach towards projects is holistic; I take pleasure in immersing
+          myself in every aspect of the development journey, from envisioning
+          the product and architecting the platform, down to refining code and
+          crafting elegant design patterns.
         </p>
         <p className="mb-0">
-          My moto is Methodical Artistry and my goal is to fine tune my work to
-          be accessible and user-friendly, functional and fluid, and simple and
-          elegant.
+          Operating under the motto of &apos;Methodical Artistry&apos;, my goal
+          is to meticulously fine-tune my creations to be accessible and
+          user-friendly, functional yet fluid, embodying a simplicity that
+          exudes elegance.
         </p>
       </div>
 
@@ -65,26 +69,41 @@ const About: NextPage = () => {
           After Hours
         </h2>
         <div className="flex flex-col gap-5 text-neutral-700 dark:text-neutral-300">
-          <p>Outside of work, all my time is spent focusing on health.</p>
           <p>
-            For physical health, I do weight training and Bikram Yoga. For
-            mental peace I meditate.
+            When I step away from the digital realm of work, my attention shifts
+            entirely towards nourishing my holistic well-being.
           </p>
           <p>
-            I also spend a good portion of my time studying, learning and
-            exercising my mental capacity. I try to do a coding challenge a day,
-            learning new technologies or read articles.
+            For physical health, I do weight training to achieve strength and
+            endurance. I also practice Bikram Yoga, an intense, heated style of
+            yoga that aids in flexibility, balance, and the deep cleansing of
+            body and mind.
           </p>
           <p>
-            And I&apos;m a big fan of Techno and play at events when I get the
-            chance. You can listen to some of my sets{' '}
-            <ExternalLink
-              href="https://www.zarbsound.com/"
-              className="font-semibold underline"
-            >
-              here
-            </ExternalLink>
-            .
+            For mental tranquility, I delve into meditation. This discipline
+            helps me cultivate mindfulness and equanimity, enabling me to
+            approach life&apos;s fluctuations with a calm and steady mind.
+          </p>
+          <p>
+            I devote a substantial portion of my time to studying, learning, and
+            exercising my cognitive faculties. I love the thrill of conquering a
+            coding challenge, acquiring knowledge on emerging technologies, or
+            diving into insightful articles that pique my curiosity.
+          </p>
+          <p>
+            Beyond the intricacies of coding and the pursuit of wellness, I
+            immerse myself in the throbbing sphere of Techno music. Not just an
+            ardent enthusiast, I am also an occasional performer, always ready
+            to seize the chance to command the decks at events when the
+            opportunity presents itself.
+          </p>
+          <p>
+            In the vast expanse between coding and Techno, I&apos;ve discovered
+            an intriguing symmetry. In this sense, my Techno endeavours feel
+            less like a departure from my coding practice and more like its
+            natural continuation, in an auditory form. This parallel allows me
+            to transition seamlessly between the two, creating a harmonious
+            blend of my professional and personal passions.
           </p>
         </div>
       </div>
