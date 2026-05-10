@@ -209,6 +209,38 @@ const ArrowLeftCircle: FC<IndividualIconProps> = ({
   </svg>
 );
 
+const Cellebrite: FC<IndividualIconProps> = ({
+  size,
+  className,
+  theme,
+}) => {
+  const customBgFill = theme === 'light' ? neutral[900] : neutral[200];
+  const customLogoFill = theme === 'light' ? neutral[200] : neutral[900];
+
+  return (
+    <svg
+      className={className}
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="12" cy="12" r="12" fill={customBgFill} />
+      <circle cx="8.0" cy="16.5" r="1.7" fill={customLogoFill} />
+      <circle cx="5.5" cy="14.5" r="1.45" fill={customLogoFill} />
+      <circle cx="5.0" cy="11.5" r="1.2" fill={customLogoFill} />
+      <circle cx="6.0" cy="8.5" r="0.95" fill={customLogoFill} />
+      <circle cx="8.5" cy="6.5" r="0.75" fill={customLogoFill} />
+      <circle cx="11.5" cy="6.0" r="0.6" fill={customLogoFill} />
+      <path
+        d="M17.5 3.5 L18.1 5.4 L20.0 6.0 L18.1 6.6 L17.5 8.5 L16.9 6.6 L15.0 6.0 L16.9 5.4 Z"
+        fill={customLogoFill}
+      />
+    </svg>
+  );
+};
+
 const Corellium: FC<IndividualIconProps> = ({
   size,
   fill,
@@ -1566,7 +1598,12 @@ export type StackIconNames =
   | 'rollup'
   | 'svelte';
 
-export type CompanyIconNames = 'corellium' | 'pay' | 'leadchat' | 'backifi';
+export type CompanyIconNames =
+  | 'cellebrite'
+  | 'corellium'
+  | 'pay'
+  | 'leadchat'
+  | 'backifi';
 
 export type SocialIconsNames = 'github' | 'linkedin';
 
@@ -1609,6 +1646,7 @@ const iconsMap: IconsMap = {
   arrowRight: ArrowRight,
   arrowLeftCircle: ArrowLeftCircle,
   arrowTopRight: ArrowTopRight,
+  cellebrite: Cellebrite,
   corellium: Corellium,
   pay: Pay,
   leadchat: Leadchat,

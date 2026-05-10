@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import type { FC } from 'react';
 import type { NavLink } from 'components/Nav';
 import { CustomLink } from 'components/Nav';
@@ -9,7 +8,7 @@ type FooterProps = {
 };
 
 export const Footer: FC<FooterProps> = ({ navLinks }) => (
-  <footer className="flex flex-col items-center justify-between gap-4 border-t-[1px] border-neutral-100 pt-8 dark:border-neutral-800 sm:flex-row sm:pb-32">
+  <footer className="flex flex-col items-center justify-between gap-4 border-t-[1px] border-neutral-200 pt-8 dark:border-neutral-800 sm:flex-row sm:pb-32">
     <nav className="flex gap-6 pb-16 sm:gap-2 sm:pb-0">
       {navLinks.map((link, index) => {
         if (link.label === 'Resume') {
@@ -19,6 +18,7 @@ export const Footer: FC<FooterProps> = ({ navLinks }) => (
               label={link.label}
               href={link.href}
               target="_blank"
+              rel="noopener noreferrer"
               className="group !text-neutral-400 hover:!text-neutral-500 dark:!text-neutral-600 dark:hover:!text-neutral-500"
               icon={
                 <Icons
@@ -32,12 +32,12 @@ export const Footer: FC<FooterProps> = ({ navLinks }) => (
         }
 
         return (
-          <Link key={index} href={link.href} passHref>
-            <CustomLink
-              label={link.label}
-              className="!text-neutral-400 hover:!text-neutral-500 dark:!text-neutral-600 dark:hover:!text-neutral-500"
-            />
-          </Link>
+          <CustomLink
+            key={index}
+            label={link.label}
+            href={link.href}
+            className="!text-neutral-400 hover:!text-neutral-500 dark:!text-neutral-600 dark:hover:!text-neutral-500"
+          />
         );
       })}
     </nav>

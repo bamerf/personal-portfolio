@@ -1,11 +1,15 @@
 export const navData = [
   {
-    label: 'Home',
-    href: '/',
+    label: 'Work',
+    href: '/#work',
+  },
+  {
+    label: 'Education',
+    href: '/#education',
   },
   {
     label: 'About',
-    href: '/about',
+    href: '/#about',
   },
   {
     label: 'Resume',

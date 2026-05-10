@@ -14,7 +14,7 @@ export const EducationSection: FC<EducationSectionProps> = ({ className }) => {
   // const [inViewIndexes, setInViewIndexes] = useState<number[] | null>(null);
 
   return (
-    <div className={clsx('mb-8', className)}>
+    <div id="education" className={clsx('mb-24', className)}>
       <h2 className="mb-6 text-3xl font-semibold text-neutral-800 dark:text-neutral-200">
         Education
       </h2>

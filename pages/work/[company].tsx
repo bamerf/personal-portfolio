@@ -46,14 +46,12 @@ const Corellium: FC<CorelliumPageProps> = ({ data }) => {
         description={`Work experience of Bamdad Erfanian, a software engineer based in ${location}`}
       />
       <div className="mb-16 flex flex-col gap-8 sm:gap-16">
-        <Link href="/#work" passHref>
-          <a className="w-fit">
-            <Icons
-              name="arrowLeftCircle"
-              size={38}
-              className="stroke-neutral-300 dark:stroke-neutral-300"
-            />
-          </a>
+        <Link href="/#work" className="w-fit">
+          <Icons
+            name="arrowLeftCircle"
+            size={38}
+            className="stroke-neutral-300 dark:stroke-neutral-300"
+          />
         </Link>
 
         <div>
@@ -66,23 +64,25 @@ const Corellium: FC<CorelliumPageProps> = ({ data }) => {
               <Icons name={stack} key={index} fill={neutral[800]} size={28} />
             ))}
           </div>
-          <div
-            className={clsx(
-              'rounded-lg border-2 border-neutral-200 leading-[0px] dark:border-transparent',
-              {
-                'border-0': data.name === 'Pay.com.au',
-              }
-            )}
-          >
-            <Image
-              className="rounded-md"
-              src={imagesMap[data.mainImage.src as string]}
-              width={data.mainImage.width}
-              height={data.mainImage.height}
-              alt={data.mainImage.alt}
-              placeholder="blur"
-            />
-          </div>
+          {data.mainImage && imagesMap[data.mainImage.src as string] && (
+            <div
+              className={clsx(
+                'rounded-lg border-2 border-neutral-200 leading-[0px] dark:border-transparent',
+                {
+                  'border-0': data.name === 'Pay.com.au',
+                }
+              )}
+            >
+              <Image
+                className="rounded-md"
+                src={imagesMap[data.mainImage.src as string]}
+                width={data.mainImage.width}
+                height={data.mainImage.height}
+                alt={data.mainImage.alt ?? ''}
+                placeholder="blur"
+              />
+            </div>
+          )}
         </div>
 
         <div className="flex flex-col gap-5 text-neutral-700 dark:text-neutral-300">

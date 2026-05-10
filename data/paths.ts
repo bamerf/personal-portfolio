@@ -1,12 +1,13 @@
-type Comapanies = 'corellium' | 'pay' | 'leadchat' | 'backifi';
+type Companies = 'cellebrite' | 'corellium' | 'pay' | 'leadchat' | 'backifi';
 
 type Paths = {
   params: {
-    company: Comapanies;
+    company: Companies;
   };
 }[];
 
 export const paths: Paths = [
+  { params: { company: 'cellebrite' } },
   { params: { company: 'corellium' } },
   { params: { company: 'pay' } },
   { params: { company: 'leadchat' } },

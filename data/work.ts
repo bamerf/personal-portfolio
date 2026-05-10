@@ -14,7 +14,7 @@ export type WorkData = {
   iconName: IconNames;
   date: string;
   stack?: StackIconNames[];
-  mainImage: ImageProps;
+  mainImage?: ImageProps;
   intro: (ProjectLink | string)[];
   projects?: {
     title: string;
@@ -31,9 +31,23 @@ export type WorkData = {
 
 export const workData: WorkData[] = [
   {
+    name: 'Cellebrite',
+    title: 'Senior Software Engineer',
+    date: 'Nov 2025 - Present',
+    iconName: 'cellebrite',
+    description:
+      'Part of the application feature team, shipping new features and refining existing ones across the platform.',
+    stack: ['typescript', 'react', 'nodejs', 'aws'],
+    intro: [
+      'Cellebrite builds digital intelligence software used by enterprises and governments worldwide.',
+      'I joined the application feature team with a focus on shipping new features, refining existing functionality, and driving meaningful product improvements.',
+      "Since joining, the team's feature release cadence has increased significantly.",
+    ],
+  },
+  {
     name: 'Corellium',
     title: 'Senior Frontend Engineer',
-    date: 'Nov 2021 - Present',
+    date: 'Nov 2021 - Oct 2025',
     iconName: 'corellium',
     description:
       "Member of the Product and Core engineering teams. Helped creating the company's UI library, rebuilt the marketing website and many more.",
@@ -205,7 +219,7 @@ export const workData: WorkData[] = [
     iconName: 'leadchat',
     name: 'Leadchat',
     title: 'Full Stack Developer',
-    date: 'May 2021 - Present',
+    date: 'Jun 2019 - Nov 2020',
     description:
       'Head of the engineering team responsible for multiple products. I built a handful of internal platforms and helped grow and maintain the core product.',
     stack: [
@@ -286,7 +300,7 @@ export const workData: WorkData[] = [
   {
     name: 'PoweredLocal',
     title: 'Full Stack Developer',
-    date: 'May 2021 - Present',
+    date: 'Oct 2019 - Nov 2020',
     iconName: 'backifi',
     description:
       'Co-developer on the initial engineering team, responsible for designing, architecting and building the fastest growing product in the company.',

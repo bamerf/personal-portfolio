@@ -8,7 +8,7 @@ export const educationData: EducationCardProps[] = [
     iconName: 'ga',
   },
   {
-    place: 'University of Syndey',
+    place: 'University of Sydney',
     degree: 'Master in Screen Arts',
     date: '2015 - 2016',
     iconName: 'usyd',

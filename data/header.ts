@@ -4,11 +4,11 @@ import { location } from '../data/constants';
 export const headerData: HeaderProps = {
   name: 'Bamdad Erfanian',
   title: {
-    text: 'Senior Frontend Engineer at',
-    company: 'Corellium',
+    text: 'Senior Software Engineer at',
+    company: 'Cellebrite',
   },
   description:
-    'I architect, build and design user interfaces that work for everyone. I love balancing the needs of the business with the needs of the user to create a delightful experience.',
+    'I architect, build, and design user interfaces that work for everyone. I enjoy balancing business needs with user needs to create delightful experiences.',
   socialLinks: [
     {
       name: 'LinkedIn',

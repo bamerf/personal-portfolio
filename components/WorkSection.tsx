@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 import Link from 'next/link';
 import { WorkCard } from 'components/atoms/WorkCard';
@@ -46,18 +48,12 @@ export const WorkSection = () => {
               }
             }}
           >
-            <Link
-              className="cursor-pointer"
-              href={`/work/${work.iconName}`}
-              key={index}
-            >
-              <a>
-                <WorkCard
-                  key={index}
-                  {...work}
-                  isInView={inViewIndexes?.includes(index)}
-                />
-              </a>
+            <Link href={`/work/${work.iconName}`}>
+              <WorkCard
+                key={index}
+                {...work}
+                isInView={inViewIndexes?.includes(index)}
+              />
             </Link>
           </Observer>
         ))}

@@ -6,6 +6,7 @@ const pixelToRem = (px) => `${px / 16}rem`;
 module.exports = {
   darkMode: 'class',
   content: [
+    './app/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
@@ -16,12 +17,10 @@ module.exports = {
       lg: pixelToRem(1024),
       xlg: pixelToRem(1280),
     },
-    textShadow: {
-      default: '0 0 0.8px #404040, 0 0 0.8px #404040',
-    },
     extend: {
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: ['var(--font-instrument-sans)', ...defaultTheme.fontFamily.sans],
+        mono: ['var(--font-jetbrains-mono)', ...defaultTheme.fontFamily.mono],
       },
       fontSize: {
         fluid: 'clamp(1.5rem, 3vw + 1.45rem, 2.75rem)',
@@ -29,9 +28,6 @@ module.exports = {
       scale: {
         101: '1.01',
         102: '1.02',
-      },
-      textShadow: {
-        dark: '0 0 0.8px #a3a3a3, 0 0 0.8px #a3a3a3',
       },
       transitionDelay: {
         100: '100ms',
@@ -47,8 +43,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/line-clamp'),
-    require('tailwindcss-textshadow'),
-  ],
+  plugins: [],
 };

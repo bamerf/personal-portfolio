@@ -1,3 +1,5 @@
+'use client';
+
 import type { FC } from 'react';
 import { useTheme } from 'next-themes';
 import { neutral } from 'tailwindcss/colors';
@@ -38,22 +40,24 @@ export const WorkCard: FC<WorkCardProps> = ({
   return (
     <div
       className={clsx(
-        'group flex flex-col justify-between gap-4 rounded-md bg-neutral-300 p-6 transition-all duration-75 ease-linear hover:bg-neutral-400/40 dark:bg-neutral-800 dark:hover:bg-neutral-700/40  md:flex-row',
+        'group flex flex-col justify-between gap-4 rounded-md bg-neutral-100 p-6 transition-all duration-75 ease-linear hover:bg-neutral-200/70 dark:bg-neutral-900 dark:hover:bg-neutral-800/70 md:flex-row',
         className
       )}
     >
       <div>
         <Icons className="mb-2" name={iconName} size={32} theme={theme} />
-        <h1 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
+        <h1 className="text-xl font-bold text-neutral-900 dark:text-neutral-100">
           {name}
         </h1>
         <h2 className="mb-1 font-semibold text-neutral-700 dark:text-neutral-300">
           {title}
         </h2>
-        <p className="text-sm text-neutral-500 dark:text-neutral-600">{date}</p>
+        <p className="font-mono text-sm text-neutral-500 dark:text-neutral-500">
+          {date}
+        </p>
       </div>
       <div className="flex flex-col justify-between md:w-[300px]">
-        <p className="mb-3 text-neutral-800 line-clamp-3 dark:text-neutral-300 sm:line-clamp-none">
+        <p className="mb-3 text-neutral-700 line-clamp-3 dark:text-neutral-400 sm:line-clamp-none">
           {description}
         </p>
         <div className={clsx('flex flex-wrap gap-1 pb-6')}>
@@ -69,15 +73,15 @@ export const WorkCard: FC<WorkCardProps> = ({
               })}
               key={iconName + index}
               name={iconName}
-              fill={theme === 'light' ? neutral[800] : neutral[900]}
+              fill={theme === 'light' ? neutral[800] : neutral[100]}
             />
           ))}
         </div>
-        <div className="flex items-center gap-1 text-neutral-500 group-hover:text-neutral-600 dark:text-neutral-600 dark:group-hover:text-neutral-500">
+        <div className="flex items-center gap-1 text-neutral-400 group-hover:text-neutral-600 dark:text-neutral-600 dark:group-hover:text-neutral-400">
           Read More
           <Icons
             name="arrowRight"
-            className="stroke-neutral-500 group-hover:stroke-neutral-600 dark:stroke-neutral-600 dark:group-hover:stroke-neutral-500"
+            className="stroke-neutral-400 group-hover:stroke-neutral-600 dark:stroke-neutral-600 dark:group-hover:stroke-neutral-400"
             size={20}
           />
         </div>
