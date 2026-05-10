@@ -40,7 +40,7 @@ export const WorkCard: FC<WorkCardProps> = ({
   return (
     <div
       className={clsx(
-        'group flex flex-col justify-between gap-4 rounded-md bg-neutral-100 p-6 transition-all duration-75 ease-linear hover:bg-neutral-200/70 dark:bg-neutral-900 dark:hover:bg-neutral-800/70 md:flex-row',
+        'flex flex-col justify-between gap-4 rounded-md border border-neutral-300 bg-neutral-200 p-6 dark:border-neutral-800 dark:bg-neutral-900 md:flex-row',
         className
       )}
     >
@@ -49,7 +49,7 @@ export const WorkCard: FC<WorkCardProps> = ({
         <h1 className="text-xl font-bold text-neutral-900 dark:text-neutral-100">
           {name}
         </h1>
-        <h2 className="mb-1 font-semibold text-neutral-700 dark:text-neutral-300">
+        <h2 className="mb-1 font-mono font-semibold text-neutral-700 dark:text-neutral-300">
           {title}
         </h2>
         <p className="font-mono text-sm text-neutral-500 dark:text-neutral-500">
@@ -73,17 +73,9 @@ export const WorkCard: FC<WorkCardProps> = ({
               })}
               key={iconName + index}
               name={iconName}
-              fill={theme === 'light' ? neutral[800] : neutral[100]}
+              fill={neutral[800]}
             />
           ))}
-        </div>
-        <div className="flex items-center gap-1 text-neutral-400 group-hover:text-neutral-600 dark:text-neutral-600 dark:group-hover:text-neutral-400">
-          Read More
-          <Icons
-            name="arrowRight"
-            className="stroke-neutral-400 group-hover:stroke-neutral-600 dark:stroke-neutral-600 dark:group-hover:stroke-neutral-400"
-            size={20}
-          />
         </div>
       </div>
     </div>

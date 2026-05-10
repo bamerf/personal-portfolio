@@ -11,8 +11,4 @@ export const navData = [
     label: 'About',
     href: '/#about',
   },
-  {
-    label: 'Resume',
-    href: '/bam-erfanian-resume.pdf',
-  },
 ];

@@ -3,7 +3,7 @@ import { ExternalLink } from 'components/atoms/ExternalLink';
 export function AboutSection() {
   return (
     <div id="about" className="mb-24">
-      <h2 className="mb-6 text-3xl font-semibold text-neutral-800 dark:text-neutral-200">
+      <h2 className="mb-6 font-mono text-3xl font-semibold text-neutral-800 dark:text-neutral-600">
         About
       </h2>
 
@@ -54,7 +54,7 @@ export function AboutSection() {
       </div>
 
       <div>
-        <h3 className="mb-6 text-2xl font-semibold text-neutral-800 dark:text-neutral-200">
+        <h3 className="mb-6 font-mono text-2xl font-semibold text-neutral-800 dark:text-neutral-600">
           After Hours
         </h3>
         <div className="flex flex-col gap-5 text-neutral-700 dark:text-neutral-300">

@@ -15,7 +15,7 @@ export const EducationSection: FC<EducationSectionProps> = ({ className }) => {
 
   return (
     <div id="education" className={clsx('mb-24', className)}>
-      <h2 className="mb-6 text-3xl font-semibold text-neutral-800 dark:text-neutral-200">
+      <h2 className="mb-6 font-mono text-3xl font-semibold text-neutral-800 dark:text-neutral-600">
         Education
       </h2>
       <div className="flex flex-col gap-8">

@@ -1579,6 +1579,25 @@ const SFS: FC<IndividualIconProps> = ({ size, fill, className }) => {
   );
 };
 
+const Pace: FC<IndividualIconProps> = ({ size = '32', className, theme }) => {
+  return (
+    <img
+      src="/images/pace-university-seal.svg"
+      alt="Pace University"
+      className={className}
+      width={size}
+      height={size}
+      style={{
+        width: size,
+        height: size,
+        objectFit: 'contain',
+        filter: theme === 'dark' ? 'invert(1)' : 'none',
+        flexShrink: 0,
+      }}
+    />
+  );
+};
+
 export type StackIconNames =
   | 'react'
   | 'nodejs'
@@ -1607,7 +1626,7 @@ export type CompanyIconNames =
 
 export type SocialIconsNames = 'github' | 'linkedin';
 
-export type EducationIconNames = 'ga' | 'usyd' | 'aftrs' | 'sfs';
+export type EducationIconNames = 'ga' | 'usyd' | 'aftrs' | 'sfs' | 'pace';
 
 export type UtilityIconsNames =
   | 'location'
@@ -1655,6 +1674,7 @@ const iconsMap: IconsMap = {
   sfs: SFS,
   aftrs: AFTRS,
   usyd: USYD,
+  pace: Pace,
   react: React,
   nodejs: NodeJS,
   nextjs: NextJS,

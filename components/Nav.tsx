@@ -29,7 +29,7 @@ export const CustomLink = forwardRef<HTMLAnchorElement, CustomLinkProps>(
       ref={ref}
       href={href}
       className={clsx(
-        'flex cursor-pointer items-center gap-2 rounded-md text-neutral-600 dark:text-neutral-400 sm:px-3 sm:py-2 sm:hover:bg-neutral-200 dark:sm:hover:bg-neutral-800',
+        'flex cursor-pointer items-center gap-2 rounded-md font-mono text-neutral-600 dark:text-neutral-400 sm:px-3 sm:py-2 sm:hover:bg-neutral-200 dark:sm:hover:bg-neutral-800',
         className
       )}
     >

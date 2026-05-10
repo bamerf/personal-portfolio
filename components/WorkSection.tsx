@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import { WorkCard } from 'components/atoms/WorkCard';
 import type { WorkData } from 'data/work';
 import { workData } from 'data/work';
@@ -14,7 +13,7 @@ export const WorkSection = () => {
     <div className="mb-24">
       <h2
         id="work"
-        className="mb-6 text-3xl font-semibold text-neutral-800 dark:text-neutral-200"
+        className="mb-6 font-mono text-3xl font-semibold text-neutral-800 dark:text-neutral-600"
       >
         Work
       </h2>
@@ -48,13 +47,11 @@ export const WorkSection = () => {
               }
             }}
           >
-            <Link href={`/work/${work.iconName}`}>
-              <WorkCard
-                key={index}
-                {...work}
-                isInView={inViewIndexes?.includes(index)}
-              />
-            </Link>
+            <WorkCard
+              key={index}
+              {...work}
+              isInView={inViewIndexes?.includes(index)}
+            />
           </Observer>
         ))}
       </div>

@@ -41,7 +41,7 @@ export const Footer: FC<FooterProps> = ({ navLinks }) => (
         );
       })}
     </nav>
-    <p className="mb-6 text-neutral-400 dark:text-neutral-600 sm:mb-0">
+    <p className="mb-6 font-mono text-neutral-400 dark:text-neutral-600 sm:mb-0">
       © {new Date().getFullYear()} Bamdad Erfanian
     </p>
   </footer>

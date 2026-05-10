@@ -12,7 +12,7 @@ export const headerData: HeaderProps = {
   socialLinks: [
     {
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/bamdad-erfanian/',
+      url: 'https://www.linkedin.com/in/bamerf/',
       iconName: 'linkedin',
     },
     {

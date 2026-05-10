@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import ProfileImage from 'public/images/profile.jpg';
+import ProfileImage from 'public/images/profile.png';
 import { headerData } from 'data';
 import { Icons } from './atoms/Icons';
 import type { IconNames } from './atoms/Icons';
@@ -24,19 +24,18 @@ export type HeaderProps = {
 
 export const Header = () => (
   <div className="mb-24 sm:mb-32">
-    <div className="mb-4">
+    <div className="relative mb-4 h-[125px] w-[125px] overflow-hidden rounded-full">
       <Image
-        className="rounded-full"
-        alt={'profile picture'}
-        width={125}
-        height={125}
+        alt="profile picture"
+        fill
+        className="object-cover"
         src={ProfileImage}
       />
     </div>
     <h1 className="mb-1 text-4xl font-bold text-black dark:text-white">
       {headerData.name}
     </h1>
-    <h3 className="mb-6 text-neutral-800 dark:text-neutral-200">
+    <h3 className="mb-6 font-mono text-neutral-800 dark:text-neutral-200">
       {headerData.title.text}{' '}
       <span className="font-semibold">{headerData.title.company}</span>
     </h3>
@@ -48,7 +47,7 @@ export const Header = () => (
         <div className="animate-pulse">
           <Icons name="location" size={16} className="stroke-neutral-500" />
         </div>
-        <p className="text-sm text-neutral-500">
+        <p className="font-mono text-sm text-neutral-500">
           Currently in {headerData.location}
         </p>
       </div>

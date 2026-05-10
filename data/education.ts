@@ -2,8 +2,13 @@ import type { EducationCardProps } from 'components/atoms/EducationCard';
 
 export const educationData: EducationCardProps[] = [
   {
+    place: 'Pace University',
+    degree: 'Bachelor of Science (Evaluated) — Computer Information Systems & Moving Image Arts',
+    iconName: 'pace',
+  },
+  {
     place: 'General Assembly',
-    degree: 'Certificate in Software Engineering',
+    degree: 'Graduate Certificate in Software Engineering',
     date: '2019',
     iconName: 'ga',
   },
@@ -15,7 +20,7 @@ export const educationData: EducationCardProps[] = [
   },
   {
     place: 'Australian Film, Television and Radio School',
-    degree: 'Graduate Diploma in Editing',
+    degree: 'Graduate Diploma in Screen Studies',
     date: '2014',
     iconName: 'aftrs',
   },
