@@ -36,7 +36,7 @@ export const workData: WorkData[] = [
     date: 'Nov 2025 - Present',
     iconName: 'cellebrite',
     description:
-      'Part of the application feature team, shipping new features and refining existing ones across the platform.',
+      "Part of the application feature team, shipping new features and refining existing ones. An early adopter of AI-assisted development — experimenting with tooling to sharpen the team's workflow.",
     stack: ['typescript', 'react', 'nodejs', 'aws'],
     intro: [
       'Cellebrite builds digital intelligence software used by enterprises and governments worldwide.',
@@ -50,7 +50,7 @@ export const workData: WorkData[] = [
     date: 'Nov 2021 - Oct 2025',
     iconName: 'corellium',
     description:
-      "Member of the Product and Core engineering teams. Helped creating the company's UI library, rebuilt the marketing website and many more.",
+      'Member of the core application team end-to-end — from ideation and architecture through implementation, QA, and delivery. Helped shape engineering culture and development workflows that contributed to a successful acquisition.',
     stack: [
       'typescript',
       'react',
@@ -165,7 +165,7 @@ export const workData: WorkData[] = [
     title: 'Full Stack Developer',
     date: 'Nov 2020 - Nov 2021',
     description:
-      'Founding member on the engineering team, I helped the first release of the product and was responsible for numerous features and teams.',
+      'Part of the founding engineering team, taking on a leadership role across multiple outsourced teams. Focused on culture, clear communication between product and engineering, and shipping fast to positive revenue.',
     stack: ['typescript', 'react', 'nodejs', 'apollo', 'mongodb'],
     mainImage: {
       src: 'payMain',
@@ -221,7 +221,7 @@ export const workData: WorkData[] = [
     title: 'Full Stack Developer',
     date: 'Jun 2019 - Nov 2020',
     description:
-      'Head of the engineering team responsible for multiple products. I built a handful of internal platforms and helped grow and maintain the core product.',
+      "Head of engineering, responsible for the full development lifecycle. Built and prototyped multiple products from the founders' vision, established a unified design system across the suite, and built internal tooling to manage and improve outsourced team performance.",
     stack: [
       'react',
       'nodejs',

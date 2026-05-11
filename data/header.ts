@@ -8,7 +8,7 @@ export const headerData: HeaderProps = {
     company: 'Cellebrite',
   },
   description:
-    "I architect, design and build software that works for everyone and I'm obsessed with creating a healthy culture and setting up protocols to keep a team efficient.",
+    "I architect, design and build software that works for everyone and I'm obsessed with creating a healthy culture and setting up human centric protocols to keep a team efficient.",
   socialLinks: [
     {
       name: 'LinkedIn',
